@@ -36,11 +36,15 @@ tags:
 
 ## 2. 出血性中風（ICH & SAH）
 ### 2.1 自發性腦出血（ICH）
-- **核心指引**：*（待收錄：AHA/ASA、ESO、台灣腦中風學會 ICH 指引）*
-- **規劃主題（`wiki/topics/`）**：
-  - 急性期血壓控制與集束照護（Care Bundle）（待建頁）
-  - 抗凝劑與抗血小板藥物相關腦出血之反轉處置（待建頁）
-  - 外科手術與微創血塊抽吸（MIS）適應症（待建頁）
+- **核心指引**：[[aha-asa-ich-2022|AHA/ASA 自發性腦出血臨床指引 (2022)]]（`active`，Sec 1–9 全文 100% 收錄）*（待收錄：ESO、台灣腦中風學會 ICH 指引）*
+- **臨床處置主題（`wiki/topics/`）**：
+  - [[ich-acute-bp-hemostasis|自發性腦出血急性診斷、血壓控制與止血處置]]（血腫擴大 CT/CTA/NCCT 徵象、DIAGRAM 病因檢核、2h 內平滑降壓目標 140／禁 <130、PATCH 禁血小板輸注、TXA/rFVIIa）
+  - [[ich-anticoagulation-reversal|自發性腦出血抗凝劑反轉處置]]（VKA 4-F PCC＋Vit K、Andexanet alfa、Idarucizumab、Protamine、活性碳與 RRT）
+  - [[ich-surgical-mis-icp|自發性腦出血外科手術、微創引流與顱內壓處置]]（小腦 ≥15 mL 立即手術、MIS MISTIE III、IVH 溶栓 CLEAR III、天幕上開顱／減壓去骨瓣、EVD／ICP 與禁類固醇）
+  - [[ich-inpatient-supportive-care|自發性腦出血住院重症照護、血栓預防與癲癇處置]]（Stroke Unit vs Neuro-ICU、IPC 與 24–48h 藥物預防、近端 DVT 濾網、血糖/體溫、cEEG 與禁預防性 ASM）
+  - [[ich-secondary-prevention-recovery|自發性腦出血次級預防、抗血栓重啟、復健與預後決策]]（CAA 7.4%/y 再出血分層、長期 BP <130/80、抗血小板/AF 抗凝重啟與 LAAO、禁長期 NSAIDs、DNAR 倫理與 AVERT 紅線）
+- **相關藥物／介入（`wiki/interventions/`）**：
+  - [[four-factor-pcc|四因子凝血酶原複合濃縮劑（4-Factor PCC）]]
 
 ### 2.2 蜘蛛膜下腔出血（SAH）
 - **核心指引**：*（待收錄：AHA/ASA、ESO SAH 指引）*
@@ -52,10 +56,11 @@ tags:
 ---
 
 ## 3. TIA 與次級預防（Secondary Prevention）
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（涵蓋早期 DAPT 與 AF 早期 DOAC 啟用時機）*（待收錄：AHA/ASA 2021 次級預防、ESO、台灣腦中風學會次級預防指引）*
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（早期 DAPT 與 AF-AIS 早期 DOAC）、[[aha-asa-ich-2022|AHA/ASA ICH 臨床指引 (2022)]]（Sec 9 腦出血次級預防、抗血栓重啟與高風險 MRI 初級預防）*（待收錄：AHA/ASA 2021 次級預防、ESO、台灣腦中風學會次級預防指引）*
 - **臨床處置主題（`wiki/topics/`）**：
   - [[ais-antithrombotic-dapt|高風險 TIA 與輕型中風之短期雙重抗血小板治療（DAPT）]]
   - [[sp-af-anticoagulation-timing|心房顫動（AF）中風後抗凝劑啟用時機]]
+  - [[ich-secondary-prevention-recovery|自發性腦出血次級預防、抗血栓重啟、復健與預後決策]]
   - 頸動脈狹窄（CEA vs CAS）與顱內動脈狹窄（ICAS）處置（待建頁）
   - 血脂、血壓、血糖控制與 PFO 封堵評估（待建頁）
 

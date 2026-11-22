@@ -78,3 +78,33 @@
 - **來源／對象**：`wiki/guidelines/tsgs-tsem-prehospital-ed-2020.md` → `wiki/topics/ais-prehospital-ed-systems.md`、`wiki/guidelines/aha-asa-ais-2026.md`、`wiki/overview.md`、`index.md`
 - **動作摘要**：獲使用者確認後，將台灣 119 院前通報、衛福部醫院分級評定與區域聯防、醫策會／TCPI、遠距醫療法規報備、DTN <60 min、不因 CXR 延遲 IVT，以及與 AHA 2026（RACECAT/MSU/院前禁忌/PSC CTA/Telestroke）與台灣後續 2023 EVT / 2025 IVT 之版本演變完整整合至 `ais-prehospital-ed-systems.md`、`aha-asa-ais-2026.md` 與 `overview.md`。
 - **備註／待確認**：`raw/guidelines/` 現有全部 5 份 PDF（2026 AHA/ASA 主文＋勘誤、2025 台灣 IVT、2023 台灣 EVT、2020 台灣院前／急診）皆已完成全文編譯與跨頁整合。
+
+## [2026-11-23] ingest | AHA/ASA 2022 自發性腦出血臨床指引（區塊 A：Top 10、Sec 1–4、Sec 5.1 急性降壓、Sec 5.2 抗凝反轉與止血）
+- **來源／對象**：`raw/guidelines/greenberg-et-al-2022-2022-guideline-for-the-management-of-patients-with-spontaneous-intracerebral-hemorrhage-a.pdf` → `wiki/guidelines/aha-asa-ich-2022.md`、`index.md`
+- **動作摘要**：建立 `wiki/guidelines/aha-asa-ich-2022.md`（`status: partial`），完成區塊 A（e282–e306）完整萃取：Top 10 Take-Home、SVD/CAA（7.39% vs 1.11%/y）、院前體系與 MSU、入院評估與 HE 影像標記（Spot sign / NCCT 徵象）、DIAGRAM 大血管病因檢核、急性降壓（2h 內啟動、1h 達標、目標 140 維持 130–150、禁 <130 `COR 3: Harm`）、抗凝反轉（4-F PCC＋Vit K、Andexanet alfa、Idarucizumab、活性碳、RRT、Protamine）、PATCH 禁用血小板輸注（`COR 3: Harm`）及 TXA/rFVIIa。
+- **備註／待確認**：跨頁整合更新計畫（新建 `ich-acute-bp-hemostasis.md`、`ich-anticoagulation-reversal.md` 與更新 `overview.md`）已依半自動把關提交待使用者確認；尚餘區塊 B（Sec 5.3–5.5, Sec 6）與區塊 C（Sec 7–9）待後續分次收錄。
+
+## [2026-11-23] integrate | 完成 AHA/ASA 2022 ICH 指引區塊 A 跨頁整合（急性降壓／止血、抗凝反轉、4-Factor PCC）
+- **來源／對象**：`wiki/guidelines/aha-asa-ich-2022.md` → `wiki/topics/ich-acute-bp-hemostasis.md`、`wiki/topics/ich-anticoagulation-reversal.md`、`wiki/interventions/four-factor-pcc.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，正式展開 `ich` 領域知識網，新建 2 篇 ICH 臨床主題頁（含 DIAGRAM 病因檢核與抗凝反轉 Mermaid 流程圖）與 1 篇 `4-Factor PCC` 藥物快查頁，並補齊全庫雙向連結與總覽索引。
+- **備註／待確認**：`aha-asa-ich-2022.md` 尚餘區塊 B（Sec 5.3–5.5 神經重症／ICP／癲癇 ＋ Sec 6 外科與微創手術）與區塊 C（Sec 7–9 預後／撤除維生／復健／次級預防與抗栓重啟）待後續分次 Ingest。
+
+## [2026-11-23] ingest | AHA/ASA 2022 自發性腦出血臨床指引（區塊 B：Sec 5.3–5.5 神經重症／ICP／癲癇 ＋ Sec 6 外科手術與微創引流）
+- **來源／對象**：`raw/guidelines/greenberg-et-al-2022-2022-guideline-for-the-management-of-patients-with-spontaneous-intracerebral-hemorrhage-a.pdf` → `wiki/guidelines/aha-asa-ich-2022.md`、`index.md`
+- **動作摘要**：於 `aha-asa-ich-2022.md` 補入區塊 B（e306–e325）全部建議與數據：照護場域與轉診、QASC／吞嚥／心電監測、DVT（IPC 當日、24–48h 藥物預防、禁彈性襪、近端 DVT 濾網與延遲 1–2 週抗凝）、血糖（<40–60 矯正、>180–200 治療、NICE-SUGAR）、體溫、癲癇（cEEG ≥24h、禁預防性 ASM）、EVD／ICP／滲透壓／禁類固醇，以及 Sec 6 全套外科建議（MIS MISTIE III、IVH 溶栓 CLEAR III、天幕上開顱 STICH、小腦出血 `≥15 mL` 立即手術、減壓去骨瓣）。
+- **備註／待確認**：區塊 B 跨頁整合計畫（新建 `ich-surgical-mis-icp.md`、`ich-inpatient-supportive-care.md` 與更新 `overview.md`）已提交待使用者確認；僅餘區塊 C（Sec 7–9）即可達成全文 100% 收錄。
+
+## [2026-11-23] integrate | 完成 AHA/ASA 2022 ICH 指引區塊 B 跨頁整合（外科／微創／ICP 與住院重症／VTE／癲癇）
+- **來源／對象**：`wiki/guidelines/aha-asa-ich-2022.md` → `wiki/topics/ich-surgical-mis-icp.md`、`wiki/topics/ich-inpatient-supportive-care.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，新建 2 篇 ICH 臨床主題頁（含解剖部位導向之外科／微創 Mermaid 流程圖、降死亡 vs 功能預後對照表、ICP/EVD、DVT/VTE 預防治療與癲癇處置），並補齊雙向連結與總覽索引。
+- **備註／待確認**：`aha-asa-ich-2022.md` 僅餘最後區塊 C（Sec 7 預後與撤除維生、Sec 8 復健與情緒認知、Sec 9 次級預防與抗栓重啟／初級預防）即可完成全文 100% 收錄。
+
+## [2026-11-23] ingest | AHA/ASA 2022 自發性腦出血臨床指引（區塊 C：Sec 7 預後／撤除維生 ＋ Sec 8 復健／情緒認知 ＋ Sec 9 次級與初級預防 — 全文 100% 完成）
+- **來源／對象**：`raw/guidelines/greenberg-et-al-2022-2022-guideline-for-the-management-of-patients-with-spontaneous-intracerebral-hemorrhage-a.pdf` → `wiki/guidelines/aha-asa-ich-2022.md`、`index.md`
+- **動作摘要**：於 `aha-asa-ich-2022.md` 補入最後區塊 C（e325–e337）全數建議與數據（ICH/Max-ICH 分數、禁單憑分數撤除維生、延後 DNAR 至至少第 2 天、DNAR 限縮他項治療有害、跨專業復健/ESD、AVERT 24h 密集下床有害、無憂鬱禁 Fluoxetine、PSD/失智篩檢與 SSRI 權衡、7 大再出血因子與 CAA 7.4%/y、長期 BP <130/80 PROGRESS NNT=18、機械瓣膜/LVAD 早期重啟、RESTART 抗血小板、AF ~7–8 週重啟與 LAAO、Statin SPARCL、禁長期 NSAIDs、照護者訓練與高風險 MRI 初級預防），並將指引頁升格為 `status: active`（全文 100% 收錄）。
+- **備註／待確認**：區塊 C 跨頁整合計畫（新建 `ich-secondary-prevention-recovery.md` 並更新 `overview.md` 狀態）已依半自動把關提交待使用者確認。
+
+## [2026-11-23] integrate | 完成 AHA/ASA 2022 ICH 指引區塊 C 跨頁整合與全指引收尾（`raw/guidelines/` 現有 6 份 PDF 100% 完成）
+- **來源／對象**：`wiki/guidelines/aha-asa-ich-2022.md` → `wiki/topics/ich-secondary-prevention-recovery.md`、`wiki/topics/sp-af-anticoagulation-timing.md`、`wiki/topics/ich-anticoagulation-reversal.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，新建 `ich-secondary-prevention-recovery.md`，完成 ICH 次級預防（7 大再出血因子、長期 BP <130/80、抗血栓重啟/LAAO、禁長期 NSAIDs）、預後/DNAR 倫理、復健/AVERT 紅線與高風險 MRI 初級預防整合，並雙向串聯 `sp-af-anticoagulation-timing.md`、`ich-anticoagulation-reversal.md` 與 `overview.md`（正式升格 `active`）。
+- **備註／待確認**：`raw/guidelines/` 現有全部 6 份指引 PDF（2026 AHA/ASA AIS 主文＋勘誤、2022 AHA/ASA ICH、2025 台灣 IVT、2023 台灣 EVT、2020 台灣院前／急診）皆已完成 100% 全文編譯與跨頁整合。

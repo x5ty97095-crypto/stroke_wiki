@@ -26,6 +26,11 @@ last_updated: 2026-11-23
 | [[sp-af-anticoagulation-timing\|心房顫動中風後抗凝劑啟用時機]] | `secondary-prevention`、`ais` | `active` | AF 合併 AIS 早期 vs 延遲 DOAC 啟用（ELAN / OPTIMAS / TIMING）、合併 HT 考量與禁止無適應症並加抗血小板。 |
 | [[inpatient-stroke-unit-care\|中風病房住院支持照護與併發症預防]] | `inpatient-care`、`ais` | `active` | Stroke Unit、吞嚥/FEES/VFSS/PES（含勘誤）、營養 NG vs PEG、DVT（IPC/禁彈性襪）、PSD、禁常規導尿/抗生素與 AVERT/SSRI 紅線。 |
 | [[inpatient-malignant-edema-seizures\|缺血性中風惡性腦水腫、減壓手術與中風後癲癇處置]] | `inpatient-care`、`ais` | `active` | 腦水腫監測轉診、滲透壓橋接、禁 Glibenclamide/低溫/巴比妥/類固醇、天幕上 ≤60 vs >60 歲減壓開顱、小腦梗塞 EVD/≥35 mL 減壓與癲癇處置。 |
+| [[ich-acute-bp-hemostasis\|自發性腦出血急性診斷、血壓控制與止血處置]] | `ich` | `active` | 急性 ICH 血壓（2h 啟動/1h 達標、目標 140 維持 130–150、禁 <130）、PATCH 禁用血小板輸注、TXA/rFVIIa、HE 追蹤 CT 與 DIAGRAM 病因檢核流程。 |
+| [[ich-anticoagulation-reversal\|自發性腦出血抗凝劑反轉處置]] | `ich` | `active` | 不等 INR 立即反轉：VKA（4-F PCC＋IV Vit K）、FXa 抑制劑（Andexanet/4-F PCC）、Dabigatran（Idarucizumab/aPCC/RRT）、UFH/LMWH（Protamine）與活性碳。 |
+| [[ich-surgical-mis-icp\|自發性腦出血外科手術、微創引流與顱內壓處置]] | `ich`、`inpatient-care` | `active` | 區分降死亡 vs 功能預後：小腦 ≥15 mL 立即手術、天幕上 MIS（MISTIE III）、IVH 溶栓（CLEAR III）、STICH 開顱、減壓去骨瓣、EVD/ICP 與禁類固醇。 |
+| [[ich-inpatient-supportive-care\|自發性腦出血住院重症照護、血栓預防與癲癇處置]] | `ich`、`inpatient-care` | `active` | Stroke Unit vs Neuro-ICU 分流、水腦神外轉診、DVT（當日 IPC/24–48h 藥物/禁彈性襪/IVC 濾網）、血糖/體溫、吞嚥、cEEG ≥24h 與禁預防性 ASM。 |
+| [[ich-secondary-prevention-recovery\|自發性腦出血次級預防、抗血栓重啟、復健與預後決策]] | `ich`、`secondary-prevention`、`inpatient-care` | `active` | CAA 7.4%/y 再出血 7 因子、長期 BP <130/80、機械瓣膜/LVAD/抗血小板/AF 7–8 週抗凝重啟與 LAAO、禁長期 NSAIDs、DNAR 倫理、AVERT 紅線與照護者訓練。 |
 
 ---
 
@@ -40,6 +45,7 @@ last_updated: 2026-11-23
 | 頁面 | 組織 | 領域 | 年份 | 狀態 | 單行摘要 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [[aha-asa-ais-2026\|AHA/ASA AIS 臨床指引 (2026)]] | AHA/ASA | `ais`、`secondary-prevention`、`inpatient-care`、`general` | 2026 | `active` | 2026 最新版 AIS 指引**全文 100% 收錄**（Sec 1–6：院前/MSU/EMS 轉送、影像、血壓/血糖、IVT/TNK/Table 8、EVT/大核心/BAO/MeVO/兒童、DAPT/AF 抗凝、住院照護與惡性腦水腫；已全數核對 2026/08 勘誤）。 |
+| [[aha-asa-ich-2022\|AHA/ASA 自發性腦出血臨床指引 (2022)]] | AHA/ASA | `ich`、`secondary-prevention`、`inpatient-care`、`general` | 2022 | `active` | 2022 AHA/ASA ICH 指引**全文 100% 收錄**（Sec 1–9：SVD/CAA、DIAGRAM、降壓 140/禁 <130、抗凝反轉、PATCH 禁血小板、DVT/癲癇/ICP/禁類固醇、MIS/CLEAR III/小腦 ≥15 mL、DNAR 倫理、AVERT 紅線、長期 BP <130/80、抗栓重啟/LAAO 與禁長期 NSAIDs）。 |
 | [[tsgs-ivt-2025\|台灣腦中風學會 IVT 指引更新 (2025)]] | TSGS（台灣腦中風學會） | `ais` | 2025 | `active` | 2025 台灣 IVT 全文指引（Ch 1–12）：含 2024 健保開放 4.5h、Alteplase 0.6 mg/kg 選項、DOAC 分時段建議、TNK 實證、總表三/四檢核表、台灣同意書與法律實務，及與 AHA 2026 之逐項分歧對照。 |
 | [[tsgs-evt-2023\|台灣腦中風學會 EVT 指引更新 (2023)]] | TSGS（台灣腦中風學會） | `ais` | 2023 | `active` | 2023 台灣 EVT 全文指引（一至五章；健保擴大給付 24h EVT 實證依據）：術前 CTA/灌流/CTA-CS、Bridging 6 RCT、前循環 6–24h 與大核心、後循環 BAO/PCA、術中麻醉與血壓穩定，及與 AHA 2026 之重大分歧對照。 |
 | [[tsgs-tsem-prehospital-ed-2020\|台灣院前與急診中風指引 (2020)]] | TSGS／TSEM（台灣腦中風學會／台灣急診醫學會） | `ais`、`general` | 2020 | `active` | 2020 台灣院前與急診全文指引（Ch 1–13）：119 EMS 評估與院前通報、衛福部醫院分級評定與區域聯防、醫策會認證/TCPI、DTN <60 min、遠距醫療法規、IVT 前必測血糖與不因 CXR 延遲 IVT，及與 AHA 2026/台灣新版之分歧演變。 |
@@ -51,6 +57,7 @@ last_updated: 2026-11-23
 | :--- | :--- | :--- | :--- |
 | [[tenecteplase\|Tenecteplase（TNK）]] | `ais` | `active` | 0–4.5h 並列首選靜脈溶栓藥：0.25 mg/kg（max 25 mg）體重分層單次靜推、0.4 mg/kg 禁用、監測與禁忌速查。 |
 | [[alteplase\|Alteplase（tPA）]] | `ais` | `active` | 0–4.5h 並列首選靜脈溶栓藥：0.9 mg/kg（max 90 mg；10% bolus + 60 min 輸注）、延長窗、兒童備註與併發症處置。 |
+| [[four-factor-pcc\|四因子凝血酶原複合濃縮劑（4-Factor PCC）]] | `ich` | `active` | VKA（INR ≥2.0 首選 COR 1、1.3–1.9 低劑量 10–20 IU/kg）與 FXa 抑制劑/Dabigatran 替代反轉方案；必併用 IV Vit K 5–10 mg 並注意高劑量 VTE 風險。 |
 
 ---
 

@@ -65,5 +65,6 @@ tags:
 
 ## 5. 相關頁面
 - **非心因性抗血小板與 DAPT**：[[ais-antithrombotic-dapt|急性缺血性中風抗血小板與短期 DAPT 處置]]
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **腦出血合併 AF 抗凝重啟對照**：[[ich-secondary-prevention-recovery|自發性腦出血次級預防、抗血栓重啟、復健與預後決策]]（ICH 後約 7–8 週重啟與 LAAO 考量）
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[aha-asa-ich-2022|AHA/ASA 自發性腦出血臨床指引 (2022)]]
 - **上游導覽**：[[overview|腦中風臨床處置總覽]]

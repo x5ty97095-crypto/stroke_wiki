@@ -108,3 +108,24 @@
 - **來源／對象**：`wiki/guidelines/aha-asa-ich-2022.md` → `wiki/topics/ich-secondary-prevention-recovery.md`、`wiki/topics/sp-af-anticoagulation-timing.md`、`wiki/topics/ich-anticoagulation-reversal.md`、`wiki/overview.md`、`index.md`
 - **動作摘要**：獲使用者確認後，新建 `ich-secondary-prevention-recovery.md`，完成 ICH 次級預防（7 大再出血因子、長期 BP <130/80、抗血栓重啟/LAAO、禁長期 NSAIDs）、預後/DNAR 倫理、復健/AVERT 紅線與高風險 MRI 初級預防整合，並雙向串聯 `sp-af-anticoagulation-timing.md`、`ich-anticoagulation-reversal.md` 與 `overview.md`（正式升格 `active`）。
 - **備註／待確認**：`raw/guidelines/` 現有全部 6 份指引 PDF（2026 AHA/ASA AIS 主文＋勘誤、2022 AHA/ASA ICH、2025 台灣 IVT、2023 台灣 EVT、2020 台灣院前／急診）皆已完成 100% 全文編譯與跨頁整合。
+
+## [2026-11-23] ingest | AHA/ASA 2023 動脈瘤性蜘蛛膜下腔出血臨床指引（區塊 A：Top 10、Sec 1–5、Sec 6 再出血預防、Sec 7 & 7.1 動脈瘤處置與麻醉）
+- **來源／對象**：`raw/guidelines/hoh-et-al-2023-2023-guideline-for-the-management-of-patients-with-aneurysmal-subarachnoid-hemorrhage-a-guideline-from.pdf` → `wiki/guidelines/aha-asa-sah-2023.md`、`index.md`
+- **動作摘要**：建立 `wiki/guidelines/aha-asa-sah-2023.md`（`status: partial`），完成區塊 A（e314–e332）完整萃取：HH/WFNS 分級、高分級與高齡治療、Ottawa SAH Rule / ≤6h NCCT vs >6h LP / DSA 診斷流程、高量能中心轉送、血壓控制（避 >180–200 及 MAP <65）、抗凝緊急反轉、禁常規抗纖溶藥（ULTRA `COR 3: No Benefit`）、24h 內動脈瘤栓塞 vs 夾閉（ISAT/BRAT、後循環/前循環/大片血腫/年齡分層、寬頸/血泡、禁對一般囊狀瘤濫用支架/FD `COR 3: Harm`）與術中麻醉（禁輕症常規低溫 IHAST）。
+- **備註／待確認**：區塊 A 跨頁整合計畫（新建 `sah-diagnosis-aneurysm-securing.md` 與更新 `overview.md`）已依半自動把關提交待使用者確認；尚餘區塊 B（Sec 8–10 血管痙攣/DCI/Nimodipine/水腦/癲癇/重症與復健追蹤）。
+
+## [2026-11-23] integrate | 完成 AHA/ASA 2023 aSAH 指引區塊 A 跨頁整合（診斷、再出血預防與動脈瘤處置）
+- **來源／對象**：`wiki/guidelines/aha-asa-sah-2023.md` → `wiki/topics/sah-diagnosis-aneurysm-securing.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，正式展開 `sah` 領域知識網，新建 `sah-diagnosis-aneurysm-securing.md`（含急診診斷 Mermaid 流程圖、Ottawa SAH Rule、再出血預防、24h 內 Coiling vs Clipping 決策與術中麻醉），並補齊雙向連結與總覽索引。
+- **備註／待確認**：`aha-asa-sah-2023.md` 僅餘區塊 B（Sec 8–10 血管痙攣/DCI/Nimodipine/水腦/癲癇/重症支持與復健追蹤）即可達成全文 100% 收錄。
+
+## [2026-11-23] ingest | AHA/ASA 2023 動脈瘤性蜘蛛膜下腔出血臨床指引（區塊 B：Sec 8–10 血管痙攣／DCI／水腦／癲癇／重症與復健追蹤 — 全文 100% 完成）
+- **來源／對象**：`raw/guidelines/hoh-et-al-2023-2023-guideline-for-the-management-of-patients-with-aneurysmal-subarachnoid-hemorrhage-a-guideline-from.pdf` → `wiki/guidelines/aha-asa-sah-2023.md`、`index.md`
+- **動作摘要**：於 `aha-asa-sah-2023.md` 補入區塊 B（e332–e351）全部建議與數據（ICU 集束照護、目標導向維持正常血容量禁高血容量、Fludrocortisone、VTE、護理監測、TCD/CTA/CTP/cEEG 監測 DCI、腸道 Nimodipine 60 mg q4h、症狀性誘導高血壓、IA 擴張劑與球囊成形、禁 Statin/IV 鎂/預防性升壓、EVD/腰椎引流與感染控制協議、禁終板造口、5 大高風險癲癇分層、初發癲癇 ≤7 天與禁 Phenytoin、急性/長期復健與 MoCA、圍手術與長期動脈瘤影像追蹤），並將指引頁正式升格為 `status: active`（全文 100% 收錄）。
+- **備註／待確認**：區塊 B 跨頁整合計畫（新建 `sah-vasospasm-dci-hydrocephalus.md` 與 `nimodipine.md` 並更新 `overview.md` 狀態）已依半自動把關提交待使用者確認。
+
+
+## [2026-11-23] integrate | 完成 AHA/ASA 2023 aSAH 指引區塊 B 跨頁整合與全指引收尾（raw/guidelines/ 現有 7 份 PDF 100% 完成）
+- **來源／對象**：`wiki/guidelines/aha-asa-sah-2023.md` → `wiki/topics/sah-vasospasm-dci-hydrocephalus.md`、`wiki/interventions/nimodipine.md`、`wiki/topics/sah-diagnosis-aneurysm-securing.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，新建 `sah-vasospasm-dci-hydrocephalus.md`（含 DCI 處置 Mermaid 流程圖、目標導向正常血容量、DCI 監測與誘導高血壓/IA 介入、EVD 集束與水腦、癲癇風險分層與禁 Phenytoin、Sec 9–10 復健與長期影像追蹤）及 `nimodipine.md`（60 mg q4h 腸道給藥快查卡、非中斷原則與低血壓處理），同步更新 `sah-diagnosis-aneurysm-securing.md`、`aha-asa-sah-2023.md`、`overview.md` 與 `index.md` 之雙向連結與 `active` 狀態。
+- **備註／待確認**：AHA/ASA 2023 aSAH 全文 100% 整合完成；目前 `raw/guidelines/` 全部 7 份 PDF（AIS、ICH、aSAH）皆已完成收錄與雙向連結驗證。

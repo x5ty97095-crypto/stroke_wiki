@@ -47,11 +47,12 @@ tags:
   - [[four-factor-pcc|四因子凝血酶原複合濃縮劑（4-Factor PCC）]]
 
 ### 2.2 蜘蛛膜下腔出血（SAH）
-- **核心指引**：*（待收錄：AHA/ASA、ESO SAH 指引）*
-- **規劃主題（`wiki/topics/`）**：
-  - 動脈瘤再出血預防與夾閉／栓塞時機（待建頁）
-  - 血管痙攣與遲發性腦缺血（DCI）預防與處置（待建頁）
-  - 急性水腦與顱內壓處置（待建頁）
+- **核心指引**：[[aha-asa-sah-2023|AHA/ASA 動脈瘤性蜘蛛膜下腔出血臨床指引 (2023)]]（`active`，Sec 1–10 全文 100% 收錄）*（待收錄：ESO、台灣相關 SAH 指引）*
+- **臨床處置主題（`wiki/topics/`）**：
+  - [[sah-diagnosis-aneurysm-securing|動脈瘤性蜘蛛膜下腔出血診斷、再出血預防與動脈瘤處置]]（Ottawa SAH Rule、≤6h NCCT vs >6h LP、DSA、血壓避免 MAP <65、禁常規 TXA ULTRA、24h 內 Coiling vs Clipping、禁濫用支架/FD 與術中麻醉）
+  - [[sah-vasospasm-dci-hydrocephalus|動脈瘤性蜘蛛膜下腔出血血管痙攣、遲發性腦缺血、水腦與重症處置]]（正常血容量禁高血容量、腸道 Nimodipine、DCI 監測與誘導高血壓/IA 介入、禁 Statin/Mg/預防升壓、EVD 集束、癲癇 ≤7 天與禁 Phenytoin、復健與復發追蹤）
+- **相關藥物／介入（`wiki/interventions/`）**：
+  - [[nimodipine|Nimodipine（尼莫地平）]]
 
 ---
 

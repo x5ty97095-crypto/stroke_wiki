@@ -5,9 +5,10 @@ domain:
   - ais
   - secondary-prevention
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[tsgs-ivt-2025]]"
 aliases:
   - "AIS DAPT"
   - "AIS Antiplatelet Treatment"

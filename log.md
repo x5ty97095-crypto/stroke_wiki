@@ -129,3 +129,13 @@
 - **來源／對象**：`wiki/guidelines/aha-asa-sah-2023.md` → `wiki/topics/sah-vasospasm-dci-hydrocephalus.md`、`wiki/interventions/nimodipine.md`、`wiki/topics/sah-diagnosis-aneurysm-securing.md`、`wiki/overview.md`、`index.md`
 - **動作摘要**：獲使用者確認後，新建 `sah-vasospasm-dci-hydrocephalus.md`（含 DCI 處置 Mermaid 流程圖、目標導向正常血容量、DCI 監測與誘導高血壓/IA 介入、EVD 集束與水腦、癲癇風險分層與禁 Phenytoin、Sec 9–10 復健與長期影像追蹤）及 `nimodipine.md`（60 mg q4h 腸道給藥快查卡、非中斷原則與低血壓處理），同步更新 `sah-diagnosis-aneurysm-securing.md`、`aha-asa-sah-2023.md`、`overview.md` 與 `index.md` 之雙向連結與 `active` 狀態。
 - **備註／待確認**：AHA/ASA 2023 aSAH 全文 100% 整合完成；目前 `raw/guidelines/` 全部 7 份 PDF（AIS、ICH、aSAH）皆已完成收錄與雙向連結驗證。
+
+## [2026-11-23] lint | 全庫全面品質與結構健檢（28 頁、7 份指引）
+- **來源／對象**：`raw/`、`wiki/`（28 頁）、`index.md`、`log.md`、`templates/`
+- **動作摘要**：執行臨床內容面與技術圖譜面全庫掃描：0 死連結、0 孤立頁、0 `index.md` 漏登/殘留/狀態不一致、0 非 `kebab-case` 檔名、0 YAML 必填欄缺漏、0 Mermaid 語法風險、0 `log.md` 格式異常、`raw/guidelines/` 7/7 全部收錄。
+- **備註／待確認**：偵測到 3 項可優化修飾（`four-factor-pcc.md` 與 `nimodipine.md` 補齊標準禁忌症章節結構；`overview.md` 第 4 節補連 ICH/SAH 重症頁；3 份主題頁 `guidelines_cited` 與 3 份指引頁殘留之「區塊 A」標題文字），已於健檢報告呈報待使用者指示是否一併修整。
+
+## [2026-11-23] lint | 執行全庫健檢修復（模板對齊、跨領域導覽與元資料同步）
+- **來源／對象**：`wiki/interventions/four-factor-pcc.md`、`wiki/interventions/nimodipine.md`、`wiki/overview.md`、`wiki/topics/ais-antithrombotic-dapt.md`、`wiki/topics/ais-prehospital-ed-systems.md`、`wiki/topics/sp-af-anticoagulation-timing.md`、`wiki/guidelines/aha-asa-ais-2026.md`、`wiki/guidelines/aha-asa-ich-2022.md`、`wiki/guidelines/aha-asa-sah-2023.md`
+- **動作摘要**：獲使用者確認後完成 3 項健檢修飾：(1) 兩份藥物頁對齊 `templates/intervention.md` 之「禁忌症與使用前檢核」結構並明註仿單核對；(2) `overview.md` 第 4 節補連 ICH/SAH 重症頁並補齊 3 份主題頁之 YAML `guidelines_cited`；(3) 修正 3 份指引頁殘留之「區塊 A」標題文字。
+- **備註／待確認**：全庫 28 頁通過複檢，無任何待修異常。

@@ -47,7 +47,7 @@ tags:
 > [!tip] 本指引核心定位與重大更新
 > - **完整引用**：Prabhakaran S, Gonzalez NR, Zachrison KS, et al. *2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke: A Guideline From the American Heart Association/American Stroke Association*. **Stroke**. 2026;57:e316–e436. DOI: `10.1161/STR.0000000000000513`（文獻檢索截至 2024 年 12 月，並納入截至 2025 年 3 月之高影響力試驗；取代 2018 指引與 2019 更新）。
 > - **勘誤核對**：本 2026 年 8 月正式期刊版 PDF（`e316–e436`）經逐項比對已整合同期勘誤（*Stroke*. 2026;57:e461–e467, DOI: `10.1161/STR.0000000000000530`），包含 Sec 3.2/4.7.2 晚期窗 NCCT vs CTP 文獻補述、Table 6 腎上腺素給藥途徑改為 IM、Sec 4.6.2 Alteplase 註明 max 90 mg、Sec 4.6.3 Rec 2 限定不適用 EVT 者、Table 8 標題與外傷/低密度文字修正。
-> - **本次區塊 A 最具實務變動之亮點**：
+> - **核心實務變動亮點（IVT／EVT 焦點）**：
 >   1. **IVT 藥物並列首選**：0–4.5h 同時推薦 **Tenecteplase 0.25 mg/kg（max 25 mg）** 或 **Alteplase 0.9 mg/kg（max 90 mg）**（COR 1, LOE A）；明確不推薦 TNK 0.4 mg/kg（COR 3: No Benefit, LOE A）。
 >   2. **輕型非失能中風不建議 IVT**：0–4.5h 輕型非失能症狀不建議給 IVT（COR 3: No Benefit, LOE B-R），偏好 DAPT；有失能症狀則不論 NIHSS 皆應儘速 IVT（COR 1, LOE A），不應因進階多模影像延誤給藥（COR 1, LOE B-NR）。
 >   3. **延長時間窗 IVT 細分**：Wake-up 且發覺後 ≤4.5h 以 DWI-FLAIR mismatch（COR 2a）；不適用 EVT 之 4.5–9h 或睡眠中點 9h 內灌流 mismatch（COR 2a）；無法接受 EVT 之 LVO 4.5–24h 灌流 mismatch（COR 2b）。

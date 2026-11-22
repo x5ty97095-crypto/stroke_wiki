@@ -5,9 +5,10 @@ domain:
   - secondary-prevention
   - ais
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[aha-asa-ich-2022]]"
 aliases:
   - "AF Anticoagulation Timing"
   - "Early vs Delayed DOAC"

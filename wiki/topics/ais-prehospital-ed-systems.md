@@ -9,6 +9,8 @@ last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
   - "[[tsgs-tsem-prehospital-ed-2020]]"
+  - "[[tsgs-ivt-2025]]"
+  - "[[tsgs-evt-2023]]"
 aliases:
   - "Stroke Systems of Care"
   - "Prehospital Stroke Triage"

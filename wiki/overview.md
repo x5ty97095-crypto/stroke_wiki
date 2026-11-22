@@ -68,10 +68,13 @@ tags:
 ---
 
 ## 4. 中風住院照護與併發症（Inpatient Care & Complications）
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（Sec 5 住院支持照護 ＋ Sec 6 急性併發症處置）
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（Sec 5–6）、[[aha-asa-ich-2022|AHA/ASA ICH 臨床指引 (2022)]]（Sec 5.3–8）、[[aha-asa-sah-2023|AHA/ASA aSAH 臨床指引 (2023)]]（Sec 8–9）
 - **臨床處置主題（`wiki/topics/`）**：
   - [[inpatient-malignant-edema-seizures|缺血性中風惡性腦水腫、減壓手術與中風後癲癇處置]]（滲透壓橋接、禁用 Glibenclamide/低溫/類固醇、≤60 vs >60 歲開顱、小腦梗塞 EVD/≥35 mL 枕下減壓、癲癇）
   - [[inpatient-stroke-unit-care|中風病房住院支持照護與併發症預防]]（Stroke Unit、吞嚥/FEES/VFSS/PES 勘誤、營養 NG/PEG、DVT IPC/禁彈性襪、PSD、復健與 AVERT/SSRI 紅線）
+  - [[ich-inpatient-supportive-care|自發性腦出血住院重症照護、血栓預防與癲癇處置]]（Stroke Unit vs Neuro-ICU、DVT、血糖/體溫、cEEG 與禁預防性 ASM）
+  - [[ich-surgical-mis-icp|自發性腦出血外科手術、微創引流與顱內壓處置]]（小腦 ≥15 mL 手術、MIS/IVH 溶栓、EVD/ICP 與禁類固醇）
+  - [[sah-vasospasm-dci-hydrocephalus|動脈瘤性蜘蛛膜下腔出血血管痙攣、遲發性腦缺血、水腦與重症處置]]（正常血容量、Nimodipine、DCI 監測與誘導高血壓、EVD 集束、癲癇與復健）
   - 出血轉化（Hemorrhagic Transformation）評估與處置（待建頁；抗凝考量先見 [[sp-af-anticoagulation-timing|AF 抗凝啟用時機]]，IVT 後 sICH 見 [[ais-ivt-thrombolysis|AIS IVT]]）
 
 ---

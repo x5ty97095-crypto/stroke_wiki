@@ -1,0 +1,6 @@
+# Temporary workflow artifacts (topic-slides intermediate JSON & previews)
+.tmp/
+
+# Python cache
+__pycache__/
+*.pyc

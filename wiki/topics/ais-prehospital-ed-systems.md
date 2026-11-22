@@ -5,9 +5,10 @@ domain:
   - ais
   - general
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[tsgs-tsem-prehospital-ed-2020]]"
 aliases:
   - "Stroke Systems of Care"
   - "Prehospital Stroke Triage"
@@ -21,11 +22,11 @@ tags:
 # 急性缺血性中風院前分流、急診評估與中風照護體系
 
 > [!tip] 臨床速查結論（Bottom Line）
-> - **核心時間基準（Time Metrics）**：EMS 派遣 `≤90 秒`、現場停留 `≤15 分鐘`（Sec 2.2）→ 院前提前通知醫院（COR 1）→ 急診到腦部影像 `≤25 分鐘`（COR 1，Sec 3.2）→ 院際轉診 **DIDO `≤120 分鐘`**（COR 1，Sec 2.4）。每提前 15 分鐘啟動 IVT，住院死亡與 sICH 均降（OR 0.96，GWTG）。
+> - **核心時間基準（Time Metrics）**：EMS 派遣 `≤90 秒`、現場停留 `≤15 分鐘`（Sec 2.2）→ 院前提前通知醫院（COR 1）→ 急診到腦部影像 `≤25 分鐘`（COR 1，Sec 3.2）→ **DTN `<60 分鐘`**（COR I，[[tsgs-tsem-prehospital-ed-2020|TSGS/TSEM (2020)]] Sec 6.3）→ 院際轉診 **DIDO `≤120 分鐘`**（COR 1，Sec 2.4）。每提前 15 分鐘啟動 IVT，住院死亡與 sICH 均降（OR 0.96，GWTG）。
 > - **院前三禁止（Sec 2.3）**：**禁用經皮硝化甘油（GTN 貼片）**（**COR 3: Harm, LOE A**；MR ASAP ICH 死亡 34% vs 10%）；不建議院前遠端缺血調節 **RIC**（COR 3: No Benefit，RESIST）；不建議現場積極降壓至 **SBP 130–140 mm Hg**（COR 3: No Benefit）。
 > - **EMS 轉送目的地（Sec 2.4）**：優先送最近合適中風中心（COR 1）；當地有可近 TSC 時疑似 LVO 直送 TSC（COR 2a）；**若當地具成熟快速溶栓與院際轉診體系，繞道送往遙遠（45–60 min）TSC 無益**（**COR 3: No Benefit, LOE B-R**，RACECAT）。
-> - **行動中風車（MSU）與遠距醫療**：可用時推薦 **MSU** 優於傳統 EMS 處理溶栓病患（**COR 1, LOE A**，B_PROUD / BEST-MSU）；無院內專科醫院以 **Telestroke / Teleradiology** 輔助 IVT 決策（COR 1，Sec 2.5, 2.8）。
-> - **急診評估與基本檢驗（Sec 2.7, 3.1–3.3）**：跨專業急性中風團隊（COR 1, LOE A）；**NIHSS** 為基線與治療後首選量表（COR 1）；**兒童突發持續局灶缺損（含首次癲癇）應懷疑急性中風**（COR 1）；基線 **ECG** 與 **Troponin** 應做，但**絕不可延遲 IVT 或 EVT**（COR 1）；CTA/CTP **絕不可等血清 Creatinine**（COR 1）。
+> - **行動中風車（MSU）與遠距醫療**：可用時推薦 **MSU** 優於傳統 EMS 處理溶栓病患（**COR 1, LOE A**，B_PROUD / BEST-MSU）；無院內專科醫院以 **Telestroke / Teleradiology** 輔助 IVT 決策（AHA COR 1；台灣執行須依衛福部法規報備核可，[[tsgs-tsem-prehospital-ed-2020|TSGS/TSEM (2020)]] Sec 7）。
+> - **急診評估與基本檢驗（AHA Sec 2.7, 3.1–3.3；TSGS/TSEM Sec 10, 13）**：跨專業急性中風團隊（COR 1, LOE A）；**NIHSS** 為基線與治療後首選量表（COR 1）；**兒童突發持續局灶缺損（含首次癲癇）應懷疑急性中風**（COR 1）；IVT 前**必測血糖**（COR I）、無懷疑凝血異常不等 PLT/INR/aPTT；基線 **ECG** 與 **Troponin** 應做但**絕不可延遲 IVT 或 EVT**（COR 1）；無心肺急症時**不應為照胸部 X 光（CXR）延遲 IVT**（COR IIb）；CTA/CTP **絕不可等血清 Creatinine**（AHA COR 1）。
 
 ---
 
@@ -51,17 +52,27 @@ tags:
 
 ---
 
-## 2. 各大指引建議對照（AHA/ASA vs ESO vs 台灣腦中風學會）
+## 2. 各大指引建議對照（AHA/ASA vs ESO vs 台灣腦中風學會／急診醫學會）
 
-| 比較面向 | AHA/ASA 指引（2026） | ESO 指引 | 台灣腦中風學會指引（TSGS） | 備註 |
+> [!warning] 指引／證據分歧與台灣本土架構：[[aha-asa-ais-2026|AHA/ASA (2026)]] vs [[tsgs-tsem-prehospital-ed-2020|TSGS/TSEM (2020)]]
+> - **台灣本土體系特色（TSGS/TSEM 2020）**：串聯台灣 **119 消防局 EMS**（台北市研究顯示院前通報縮短 door-to-CT 13 vs 19 min, p<0.001；CPSS 陽性＋≤3h＋血糖 ≥60 mg/dL 陽性預測值 76.9%、敏感度 64.9%）、衛福部醫事司「**醫院緊急醫療能力分級評定**」（2019 起納區域聯防與轉診網絡試評）、醫策會「**腦中風疾病照護品質認證**」與 **TCPI**，以及**衛福部遠距醫療法規報備**。
+> - **2020 → 2026 實證演進分歧**：AHA 2026 納入 RACECAT、MSU 試驗及院前禁忌（GTN/RIC/現場降壓），並將**初級醫院（PSC）急作 CTA/MRA**、**Telestroke 決定 IVT** 及**未等 Creatinine 直接 CTA** 全面升格為 `COR 1`（TSGS/TSEM 2020 當時分別為 `IIb`、`IIa`、`IIa`）。另外，TSGS/TSEM 2020 第 11–12 章之 IVT／EVT 影像選案已由 [[tsgs-ivt-2025|TSGS IVT (2025)]] 與 [[tsgs-evt-2023|TSGS EVT (2023)]] 更新。
+
+| 比較面向 | [[aha-asa-ais-2026\|AHA/ASA 指引（2026）]] | ESO 指引 | [[tsgs-tsem-prehospital-ed-2020\|台灣院前／急診指引（2020）]] | 備註／實務重點 |
 | :--- | :--- | :--- | :--- | :--- |
-| **EMS 繞道遠送 TSC（成熟體系）** | COR 3: No Benefit（RACECAT） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 實務須依台灣各縣市急診重度級醫院密度與轉診時間調整 |
-| **急診影像與 DIDO 指標** | 腦影像 ≤25 min、DIDO ≤120 min（COR 1） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | — |
+| **119/EMS 院前評估與通報** | 派遣 ≤90s、現場 ≤15 min、驗證量表（`COR 1/2a`）、提前通知醫院（`COR 1`） | `[庫內文獻尚未收錄]` | 立即打 119（`COR I`）；派遣員與救護員用評估工具並優先派遣（`COR I`）；**到院前通報（`COR I`）** | 兩版一致；台灣 2012 調查民眾良好中風識能僅 5.7%，須持續衛教 |
+| **EMS 繞道遠送 TSC（Bypass）** | 可近 TSC 直送（`2a`）；**成熟體系繞道 45–60 min 無益（`COR 3: No Benefit`, RACECAT）** | `[庫內文獻尚未收錄]` | 2020 尚無足夠證據推薦特定 LVO 量表或繞道策略，統一先送可 IVT 醫院（`COR I`） | 台灣各縣市須依重度級責任醫院距離與轉診效率調整區域聯防策略 |
+| **MSU 與院前禁忌** | MSU **`COR 1, A`**；禁 **GTN 貼片（`COR 3: Harm`）**、**RIC（`3`）**、現場降壓 130–140（`3`） | `[庫內文獻尚未收錄]` | `[原文未涵蓋]` | 院前救護應嚴守 AHA 2026 三大禁忌 |
+| **急診時間指標（影像 / DTN / DIDO）** | 腦影像 **`≤25 min`**、**DIDO `≤120 min`**（`COR 1`） | `[庫內文獻尚未收錄]` | **DTN `<60 min`**（`COR I, B-NR`）；台灣北部醫學中心跨科整合使中位 DTN 88 → 51 min | 兩版時間基準互補，合併監測最完整 |
+| **初級醫院（PSC）急作 CTA/MRA** | PSC 應能快速執行並判讀顱內 CTA/MRA（**`COR 1, B-NR`**；ASRH `2a`） | `[庫內文獻尚未收錄]` | 初始照護院所可考慮建立緊急非侵犯性顱內血管攝影流程（**`COR IIb, C-LD`**） | AHA 2026 推薦強度顯著提升，以利縮短轉診 DIDO |
+| **遠距醫療（Telestroke）** | 救護車會診、遠距讀片、無專科醫院以 Telestroke 決定 IVT 均 **`COR 1`**（EVT 分流 `2b`） | `[庫內文獻尚未收錄]` | 遠距影像判讀 **`COR I, A`**；通訊診察決定 IVT/轉診 EVT **`COR IIa, B-NR`**（強調須依衛福部法規報備核可 `COR I`） | 台灣偏鄉／離島須同步注意衛福部通訊診察法規程序 |
+| **急診檢驗與 CXR** | ECG / Troponin 應做但勿延遲 IVT/EVT（`COR 1`）；CTA/CTP **勿等 Creatinine（`COR 1`）** | `[庫內文獻尚未收錄]` | **IVT 前必測血糖（`COR I`）**；無懷疑凝血異常不等 PLT/INR/aPTT；ECG/Troponin 勿延遲（`COR I`）；無心肺急症**勿因 CXR 延遲 IVT（`COR IIb`）**；未等 Creatinine 作 CTA（`COR IIa`） | 美國研究顯示 IVT 前照 CXR 使平均 DTN 延長 17.5 min（75.8 vs 58.3 min, OR 2.78） |
+| **醫院外部評鑑與品管** | 外部獨立認證、EVT 中心追蹤時間/預後與介入醫師認證、基線 NIHSS 登錄（`COR 1`） | `[庫內文獻尚未收錄]` | 外部獨立評鑑（**衛福部醫事司分級評定、醫策會認證、TCPI**，`COR I`）；跨領域品管委員會（`COR I`）；健保適當給付（`COR I`） | 兩版高度一致 |
 
 ---
 
 ## 3. 相關頁面
 - **再灌流核心主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]、[[ais-evt-thrombectomy|急性缺血性中風血管內機械取栓（AIS EVT）]]
 - **急性血壓與支持處置**：[[ais-bp-glucose-supportive|急性缺血性中風血壓、血糖與生理支持處置]]
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-tsem-prehospital-ed-2020|台灣院前與急診中風指引 (2020)]]、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]、[[tsgs-evt-2023|台灣腦中風學會 EVT 指引更新 (2023)]]
 - **上游導覽**：[[overview|腦中風臨床處置總覽]]

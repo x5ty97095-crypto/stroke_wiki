@@ -7,6 +7,7 @@ status: active
 last_updated: 2026-11-22
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[tsgs-ivt-2025]]"
 aliases:
   - "AIS IVT"
   - "Intravenous Thrombolysis"
@@ -70,15 +71,20 @@ tags:
 
 ## 3. 各大指引建議對照（AHA/ASA vs ESO vs 台灣腦中風學會）
 
-| 比較面向 | AHA/ASA 指引（2026） | ESO 指引 | 台灣腦中風學會指引（TSGS） | 備註／差異重點 |
+| 比較面向 | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] | ESO 指引 | [[tsgs-ivt-2025\|台灣腦中風學會 TSGS (2025)]] | 備註／差異重點 |
 | :--- | :--- | :--- | :--- | :--- |
-| **0–4.5h 首選藥物** | TNK 0.25 mg/kg 或 Alteplase 0.9 mg/kg 並列（COR 1, LOE A） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 待收錄 ESO 與台灣指引（並核對台灣健保 TNK 給付現況） |
-| **4.5–9h / 醒後中風 IVT** | DWI-FLAIR（COR 2a）；不適用 EVT 之灌流 mismatch（COR 2a） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 2026/08 勘誤明確限定 4.5–9h 灌流推薦於不適用 EVT 者 |
-| **4.5–24h LVO IVT** | 無法 EVT 且灌流 mismatch（COR 2b，TRACE-III） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | — |
-| **近期 DOAC（<48h）** | 列相對禁忌（Table 8），個體化風險效益評估 | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 待與 ESO / 台灣指引比對 anti-Xa 與 Idarucizumab 規則 |
+| **0–4.5h 首選藥物與劑量** | [[tenecteplase\|TNK]] 0.25 mg/kg 或 [[alteplase\|Alteplase]] 0.9 mg/kg 並列（`COR 1, LOE A`） | `[庫內文獻尚未收錄]` | Alteplase 0.9 mg/kg 與 TNK 0.25 mg/kg 均 `COR I, LOE A`；**保留 Alteplase 0.6 mg/kg（`COR IIb, LOE B-R`）**；台灣健保 2024 開放 Alteplase 至 4.5h，TNK 尚非台灣核可腦中風藥 | 橋接 EVT 時台灣 TREAT-AIS 顯示 0.9 mg/kg 優於 0.6 mg/kg |
+| **輕型非失能中風（0–4.5h）** | **不建議 IVT**（`COR 3: No Benefit, LOE B-R`），偏好 DAPT | `[庫內文獻尚未收錄]` | 最佳內科治療優先，保留醫師評估整體利弊後個體化決定 IVT（`COR IIa, LOE B-R`） | AHA 2026 立場更明確反對非失能溶栓 |
+| **4.5–9h / 醒後中風 IVT** | 醒後 DWI-FLAIR `COR 2a`；不適用 EVT 之 4.5–9h 灌流 `COR 2a` | `[庫內文獻尚未收錄]` | 4.5–9h 灌流（EXTEND 條件）`COR IIa`（**警語：台灣仿單限 4.5h、健保不給付**）；醒後 DWI-FLAIR `COR IIb` | 台灣執行 >4.5h 屬仿單外且自費，須充分 SDM |
+| **4.5–24h LVO IVT** | 無法 EVT 且灌流 mismatch（`COR 2b`, TRACE-III） | `[庫內文獻尚未收錄]` | Ch 10.2 僅文獻回顧 TRACE-III/TIMELESS，未給正式 COR | — |
+| **近期 DOAC（<48h）** | 列相對禁忌（Table 8），個體化評估末次時間、腎功能、EVT、反轉劑與檢驗 | `[庫內文獻尚未收錄]` | 細分：>48h `COR I`；Dabigatran 先給 **Idarucizumab 反轉 `COR IIa`**；**24–48h Xa 抑制劑 `COR IIb`**；**<24h Xa 抑制劑不建議 `COR III`**（列總表三） | 台灣對 <24h Xa 抑制劑立場較保守 |
+| **兒童 IVT** | 28 天–18 歲確診失能 AIS 考慮 Alteplase（`COR 2b, LOE C-LD`） | `[庫內文獻尚未收錄]` | 總表三必備條件列 **≥18 歲** | — |
 
-> [!warning] 指引／證據分歧狀態
-> 目前知識庫僅收錄 [[aha-asa-ais-2026|AHA/ASA AIS (2026)]]，尚未收錄 ESO 與台灣腦中風學會指引，故跨指引差異待後續 Ingest 後補齊對照。
+> [!warning] 指引／證據分歧：[[aha-asa-ais-2026|AHA/ASA (2026)]] vs [[tsgs-ivt-2025|台灣腦中風學會 (2025)]]
+> 兩份指引在 **10 項細節存在顯著差異**（完整對照詳見 [[aha-2026-vs-tsgs-2025-ivt|美台 IVT 指引差異比較頁]]）：
+> 1. **禁忌時間／大小門檻**：台灣總表三將 **<3 個月**顱內/脊柱手術或嚴重 TBI、**<14 天**重大非 CNS 手術、**<1 個月**中風、**<7 天**非同步 STEMI、**>1 cm** 未破裂動脈瘤列不建議；AHA 2026 Table 8 則以 **14 天**切分神外手術/TBI、未破裂動脈瘤列低疑慮，但已將 **ARIA／抗類澱粉免疫療法**正式列為絕對禁忌。
+> 2. **併發症處置差異**：sICH 補 Cryoprecipitate 門檻台灣為維持 Fibrinogen **`≥200 mg/dL`**（AHA 為 `≥150 mg/dL`）；口舌血管性水腫 Epinephrine 台灣寫 `0.3 mL SC`，AHA 2026 勘誤已修正為 **`0.3 mL IM`**。
+> 3. **台灣本土法律實務（[[tsgs-ivt-2025|TSGS 2025]] Ch 12）**：危急無家屬在場時依《醫療法》§60 先行急救、24h 內詳載病歷並建議**二位醫師共同認定**；不符合適應症時病患或家屬**無權強制要求**施打 IVT 或 EVT。
 
 ---
 
@@ -116,6 +122,7 @@ tags:
 
 ## 7. 相關頁面
 - **藥物快查**：[[tenecteplase|Tenecteplase (TNK)]]、[[alteplase|Alteplase (tPA)]]
-- **相關臨床主題**：[[ais-evt-thrombectomy|急性缺血性中風機械取栓（AIS EVT）]]
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **美台指引比較**：[[aha-2026-vs-tsgs-2025-ivt|AHA/ASA 2026 vs 台灣腦中風學會 2025 IVT 分歧對照]]
+- **相關臨床主題**：[[ais-evt-thrombectomy|急性缺血性中風機械取栓（AIS EVT）]]、[[ais-bp-glucose-supportive|急性缺血性中風血壓、血糖與生理支持處置]]、[[ais-antithrombotic-dapt|急性缺血性中風抗血小板與短期 DAPT 處置]]
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]
 - **上游導覽**：[[overview|腦中風臨床處置總覽]]

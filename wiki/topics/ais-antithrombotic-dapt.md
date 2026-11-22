@@ -70,7 +70,7 @@ flowchart TD
 
 | 臨床情境 | 建議內容 | COR / LOE | 出處與依據 |
 | :--- | :--- | :--- | :--- |
-| **IVT 後 24 小時內抗血小板** | 風險不確定；常規應待 24h 影像排除出血後再給，僅在合併不給將有重大風險之共病時可考慮 | `COR 2b, LOE B-NR` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.8 (e378, e380) |
+| **IVT 後 24 小時內抗血小板** | **AHA 2026**：風險不確定，僅於不給具重大風險共病時考慮（`COR 2b, LOE B-NR`）。**台灣 TSGS 2025**：(1) 24h 內發生早期神經學惡化（END）且排除出血與 LVO，可考慮 **IV Tirofiban**（`COR IIb, LOE B-NR`）；(2) 橋接 EVT 遇**動脈狹窄再阻塞或急放支架**，可考慮早期抗血小板（**`COR IIa, LOE B-NR`**）。 | `AHA 2b` / `TSGS IIa–IIb` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.8；[[tsgs-ivt-2025\|TSGS IVT (2025)]] Sec 9.4 (p.25–29) |
 | **顱外頸／椎動脈剝離** | 抗血小板**或**抗凝治療至少 **3 個月**皆合理 | `COR 2a, LOE B-R` | CADISS、TREAT-CAD 合併（N=444） |
 | **服 Aspirin 期間突破性中風** | 加量或更換另一種 SAPT 療效尚未確立 | `COR 2b, LOE B-NR` | 缺高品質 RCT（Sec 4.8, e378, e381） |
 | **單用 Ticagrelor 優於 Aspirin** | 不建議（SOCRATES 未達優效 P=0.07；但 Aspirin 禁忌者可替代） | `COR 3: No Benefit, LOE B-R` | SOCRATES（Sec 4.8, e378, e381–e382） |

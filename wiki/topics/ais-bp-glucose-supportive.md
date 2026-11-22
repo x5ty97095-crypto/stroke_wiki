@@ -4,9 +4,11 @@ type: topic
 domain:
   - ais
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[tsgs-ivt-2025]]"
+  - "[[tsgs-evt-2023]]"
 aliases:
   - "AIS Blood Pressure Management"
   - "AIS Acute Supportive Care"
@@ -41,7 +43,7 @@ tags:
 | **[[ais-ivt-thrombolysis\|IVT]] 給藥後（前 24 小時）** | 維持 **`BP <180/105 mm Hg`**（維持 SBP 140–180 mm Hg） | `COR 1, LOE B-R` | 監測頻率見 [[tenecteplase\|TNK]] / [[alteplase\|Alteplase]] |
 | **IVT 後積極降壓（SBP <140 mm Hg）** | 輕中度 AIS 溶栓後**不建議**積極降 SBP <140 mm Hg | `COR 3: No Benefit, LOE B-R` | ENCHANTED：ICH 略少但 90d mRS 無改善 |
 | **[[ais-evt-thrombectomy\|EVT]]（未 IVT）術前** | 維持 **`BP ≤185/110 mm Hg`** 為合理 | `COR 2a, LOE B-NR` | 參照多項 EVT RCT 排除門檻 |
-| **EVT 術中及術後 24 小時** | 維持 **`BP ≤180/105 mm Hg`** 為合理 | `COR 2a, LOE B-NR` | RCT 顯示 <130 未降 sICH、<160 未改善功能 |
+| **EVT 術中及術後 24 小時** | 維持 **`BP ≤180/105 mm Hg`** 為合理；[[tsgs-evt-2023\|TSGS (2023)]] 強調**維持術中血壓穩定、避免低血壓**（`COR IIa, LOE B-NR`） | `COR 2a, LOE B-NR`（AHA） / `COR IIa, LOE B-NR`（TSGS） | AHA：RCT 顯示 <130 未降 sICH、<160 未改善功能；TSGS 2023 3-RCT 統合（SIESTA/AnStroke/GOLIATH）：術中 **MABP <70 mm Hg >10 min** 或 **>90 mm Hg >45 min** 與 3 個月不良預後相關，多項研究採術中 SBP 140–180 mm Hg |
 | **前循環 LVO 成功 EVT（mTICI 2b/2c/3）後 72h 內積極降壓** | 無其他降壓適應症時，**禁止積極降 SBP <140 mm Hg** | `COR 3: Harm, LOE A` | 兩項高品質 RCT（如 ENCHANTED2/MT、OPTIMAL-BP）：降 <140 減損功能獨立且增死亡率；<120 增早期惡化與 3 個月重度失能 |
 
 > [!danger] 成功取栓後的血壓紅旗（COR 3: Harm）
@@ -66,15 +68,18 @@ tags:
 
 ## 3. 各大指引建議對照（AHA/ASA vs ESO vs 台灣腦中風學會）
 
-| 比較面向 | AHA/ASA 指引（2026） | ESO 指引 | 台灣腦中風學會指引（TSGS） | 備註 |
+| 比較面向 | [[aha-asa-ais-2026\|AHA/ASA 指引（2026）]] | ESO 指引 | 台灣腦中風學會指引（[[tsgs-ivt-2025\|IVT 2025]] / [[tsgs-evt-2023\|EVT 2023]]） | 備註 |
 | :--- | :--- | :--- | :--- | :--- |
-| **成功 EVT 後積極降壓 <140** | COR 3: Harm, LOE A（72h 內禁用） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 待補 ESO 與台灣指引對照 |
-| **急性血糖目標** | 140–180 mg/dL（COR 2a）；禁止 80–130（COR 3: No Benefit） | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | — |
+| **IVT 後血壓目標** | `<180/105 mm Hg`（`COR 1, B-R`）；禁積極降 `<140`（`COR 3: No Benefit`） | `[庫內文獻尚未收錄]` | **`<180/105 mm Hg`**（`COR I, B-NR`）；引 ENCHANTED 指出積極降 130–140 無益且嚴重中風死亡率上升 | 美台一致 |
+| **EVT 術中血壓管理** | 術中與術後 24h 維持 `≤180/105`（`COR 2a, B-NR`） | `[庫內文獻尚未收錄]` | 不論麻醉方式**維持術中血壓穩定**（`COR IIa, B-NR`）；警示 MABP <70 >10 min 或 >90 >45 min 不利 | 兩版互補；GA 較 CS 更易發生術中低血壓（MABP 降 >20% OR 10.76） |
+| **成功 EVT 後積極降壓 <140** | **`COR 3: Harm, LOE A`**（72h 內禁用） | `[庫內文獻尚未收錄]` | `[2023 EVT 指引未涵蓋術後 72h 積極降壓紅線]` | 臨床應採最新 AHA 2026 紅線 |
+| **急性血糖目標** | 140–180 mg/dL（`COR 2a`）；禁止 80–130（`COR 3: No Benefit`） | `[庫內文獻尚未收錄]` | IVT 指引（2025）列持續 `<50` 或 `>400 mg/dL` 為檢核條件（矯正後評估） | 住院目標血糖以 AHA 2026 為主 |
 
 ---
 
 ## 4. 相關頁面
 - **再灌流主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]、[[ais-evt-thrombectomy|急性缺血性中風血管內機械取栓（AIS EVT）]]
 - **抗血栓主題**：[[ais-antithrombotic-dapt|急性缺血性中風抗血小板與短期 DAPT 處置]]
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]、[[tsgs-evt-2023|台灣腦中風學會 EVT 指引更新 (2023)]]
+- **跨指引比較**：[[aha-2026-vs-tsgs-2023-evt|AHA/ASA 2026 vs 台灣腦中風學會 2023 EVT 分歧對照]]
 - **上游導覽**：[[overview|腦中風臨床處置總覽]]

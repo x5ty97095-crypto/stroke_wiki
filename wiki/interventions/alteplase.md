@@ -36,6 +36,7 @@ tags:
 | **發病時間不明，發覺 ≤4.5h（DWI-FLAIR mismatch）** | 同成人標準 IVT 方案（WAKE-UP 採用 `0.9 mg/kg`；THAWS 採用 `0.6 mg/kg` 提前終止未顯著） | **90 mg** | `COR 2a, LOE B-R` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.6.3 (e359–e360) |
 | **4.5–9h／睡眠中點 ≤9h（不適用 EVT＋灌流 mismatch）** | 同成人標準 IVT 方案（EXTEND 採用 `0.9 mg/kg`） | **90 mg** | `COR 2a, LOE B-R` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.6.3 (e359–e360; 勘誤 #13) |
 | **兒童 AIS（28 天–18 歲，0–4.5h 失能缺損）** | 安全但療效不確定（Table 7 註明 `*Dosing for pediatric patients has not been determined`；詳見下方勘誤警示） | `[未確立]` | `COR 2b, LOE C-LD` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.6.1, Table 7 (e354, e357–e358) |
+| **成人 AIS，0–4.5h（低劑量特殊考量）** | `0.6 mg/kg` IV（台灣指引保留於臨床特殊考量如高齡；ENCHANTED 未證實非劣於 0.9 mg/kg，但 SITS-MOST sICH 較低 1% vs 2%；橋接 EVT 時台灣 TREAT-AIS 顯示標準劑量較佳） | `[原文未報告]` | `COR IIb, LOE B-R`（僅台灣指引） | [[tsgs-ivt-2025\|TSGS IVT (2025)]] Ch 4 (p.8–9) |
 | **併用低劑量 Alteplase（5 mg）+ Mutant Prourokinase** | **不建議** | — | `COR 3: No Benefit, LOE B-R` | [[aha-asa-ais-2026\|AHA/ASA AIS (2026)]] Sec 4.6.4 (e361) |
 
 > [!warning] 兒童劑量原文勘誤警示
@@ -65,20 +66,22 @@ tags:
 - **病房與生命徵象**：入住 ICU 或 Stroke Unit；輸注中及給藥後前 2h 每 15 分鐘、接續 6h 每 30 分鐘、之後每小時至 24h 測 BP 與神經學評估。
 - **血壓上限**：維持 `SBP ≤180 mm Hg`、`DBP ≤105 mm Hg`。
 - **抗血栓延後**：24h 追蹤 CT/MRI 排除出血後再啟用抗血小板或抗凝治療；儘量延後鼻胃管、導尿管與動脈導管置放。
-- **24h 內 sICH 處置（Table 5）**：**立即停止 Alteplase 輸注** → 急查 CBC/PT(INR)/aPTT/Fibrinogen/備血 ＋ 急做 NCCT → Cryoprecipitate 10 U（10–30 min，維持 Fibrinogen ≥150 mg/dL）＋ Tranexamic acid 1000 mg IV（10 min）或 ε-aminocaproic acid → 會診血腫與神外。
-- **口舌血管性水腫（Table 6）**：維持氣道（首選清醒纖支鏡插管）→ **立即停止 Alteplase 輸注並暫停 ACEi** → IV Methylprednisolone 125 mg ＋ Diphenhydramine 50 mg ＋ Famotidine 20 mg（或 Ranitidine 50 mg）→ 進展時給 **0.1% Epinephrine 0.3 mL IM**（勘誤修正）或霧化 0.5 mg/dL，必要時考慮 Icatibant 30 mg SC 或 C1-INH 20 IU/kg。
+- **24h 內 sICH 處置（AHA Table 5 / 台灣表 9.1）**：**立即停止 Alteplase 輸注** → 急查 CBC/PT(INR)/aPTT/Fibrinogen/備血 ＋ 急做 NCCT → Tranexamic acid 1000 mg IV（10 min）＋ Cryoprecipitate 10–12 U（10–30 min；**AHA 2026 目標維持 Fibrinogen ≥150 mg/dL，台灣 2025 目標 ≥200 mg/dL**；台灣少用 ε-aminocaproic acid 故未列）→ 會診血腫與神外。
+- **口舌血管性水腫（AHA Table 6 / 台灣 9.2）**：維持氣道（首選清醒纖支鏡插管）→ **立即停止 Alteplase 輸注並暫停 ACEi** → IV Methylprednisolone 125 mg ＋ Diphenhydramine 50 mg ＋ Famotidine 20 mg → 進展時給 **0.1% Epinephrine 0.3 mL IM**（AHA 2026 勘誤修正；註：台灣 2025 原文仍沿用 2018 寫 `0.3 mL SC`）或霧化 0.5 mL，必要時考慮 Icatibant 30 mg SC 或 C1-INH 20 IU/kg（台灣僅核准 HAE）。
 
 ---
 
 ## 4. 各大指引立場與本土實務備註
 - **AHA/ASA（2026）**：0–4.5h 以 `0.9 mg/kg`（max 90 mg）與 Tenecteplase 並列 COR 1, LOE A（[[aha-asa-ais-2026|AHA/ASA AIS (2026)]] Sec 4.6.2）。
 - **ESO**：`[庫內文獻尚未收錄]`
-- **台灣腦中風學會／健保備註**：`[庫內文獻尚未收錄]`（註：台灣與日本臨床常見之低劑量 0.6 mg/kg 討論，將於收錄台灣指引或 ENCHANTED/THAWS 論文後補入對照。）
+- **台灣腦中風學會／健保備註（[[tsgs-ivt-2025|TSGS IVT (2025)]]）**：
+  - 台灣現行唯一核可之腦中風溶栓藥（TFDA 2002，栓體舒）；**2024 年起全民健保正式開放給付至發病 4.5 小時內**，但仿單仍限 4.5 小時內，**超過 4.5 小時健保不給付**（p.4–5, p.30）。
+  - 標準劑量 `0.9 mg/kg` 為 `COR I, LOE A`；低劑量 `0.6 mg/kg` 列 `COR IIb, LOE B-R` 供臨床特殊考量（p.8–9）。
 
 ---
 
 ## 5. 關鍵支撐試驗與關聯頁面
-- **關鍵試驗（指引引用，個別頁待建）**：NINDS rt-PA、ECASS III、WAKE-UP、THAWS、EXTEND、PRISMS、ARAMIS、CHOICE（成功 EVT 後 IA Alteplase）。
+- **關鍵試驗（指引引用，個別頁待建）**：NINDS rt-PA、ECASS III、WAKE-UP、THAWS、EXTEND、ENCHANTED、PRISMS、ARAMIS、TREAT-AIS、CHOICE。
 - **所屬臨床主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]、[[ais-evt-thrombectomy|急性缺血性中風機械取栓（AIS EVT）]]
-- **同類對照藥物**：[[tenecteplase|Tenecteplase (TNK)]]
-- **相關指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **同類對照與指引比較**：[[tenecteplase|Tenecteplase (TNK)]]、[[aha-2026-vs-tsgs-2025-ivt|AHA/ASA 2026 vs 台灣腦中風學會 2025 IVT 分歧對照]]
+- **相關指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]

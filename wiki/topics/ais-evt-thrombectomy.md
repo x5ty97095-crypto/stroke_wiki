@@ -4,9 +4,10 @@ type: topic
 domain:
   - ais
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 guidelines_cited:
   - "[[aha-asa-ais-2026]]"
+  - "[[tsgs-evt-2023]]"
 aliases:
   - "AIS EVT"
   - "Endovascular Thrombectomy"
@@ -27,8 +28,9 @@ tags:
 >   - `6–24h`：NIHSS ≥6、prestroke mRS 0–1、**ASPECTS ≥6**；或**精選病患 ASPECTS 3–5**（年齡 <80 歲、無顯著 mass effect）。
 > - **超核心與既有失能（COR 2a）**：`0–6h` 精選 **ASPECTS 0–2**（<80 歲、無顯著 mass effect，COR 2a, LOE B-R）；`0–6h` **prestroke mRS 2** 且 ASPECTS ≥6（COR 2a, LOE B-NR）。
 > - **基底動脈阻塞（BAO）強推薦**：`0–24h`、baseline mRS 0–1、**NIHSS ≥10**、**PC-ASPECTS ≥6**（COR 1, LOE A，Sec 4.7.3）。
-> - **中遠端血管（MeVO）不建議常規取栓**：非優勢/共優勢近端 M2、遠端 MCA、ACA、PCA 屬 **COR 3: No Benefit, LOE A**（僅優勢近端 M2 0–6h 為 COR 2a, LOE B-NR）。
-> - **取栓前後血壓目標與紅旗**：未 IVT 者術前維持 `≤185/110`、術中/術後 24h 維持 `≤180/105`（COR 2a）；**前循環 LVO 成功再通（mTICI 2b/2c/3）後 72h 內積極降 SBP <140 mm Hg 有害且禁用**（**COR 3: Harm, LOE A**；詳見 [[ais-bp-glucose-supportive|AIS 血壓與支持處置]]）。
+> - **中遠端血管（MeVO）不建議常規取栓**：非優勢/共優勢近端 M2、遠端 MCA、ACA、PCA 於 [[aha-asa-ais-2026|AHA/ASA (2026)]] 屬 **COR 3: No Benefit, LOE A**（僅優勢近端 M2 0–6h 為 COR 2a）；*注意：較早期之 [[tsgs-evt-2023|台灣 EVT 指引 (2023)]] 曾列單獨 PCA 阻塞為 COR IIb，惟已被 2025 ESCAPE-MeVO / DISTAL 陰性 RCT 翻轉，詳見第 3 節衝突提醒*。
+> - **取栓前後血壓目標與紅旗**：未 IVT 者術前維持 `≤185/110`、術中/術後 24h 維持 `≤180/105`（COR 2a），[[tsgs-evt-2023|TSGS (2023)]] 另提醒術中維持血壓穩定、避免 MABP <70 >10 min 或 >90 >45 min（COR IIa）；**前循環 LVO 成功再通（mTICI 2b/2c/3）後 72h 內積極降 SBP <140 mm Hg 有害且禁用**（**COR 3: Harm, LOE A**；詳見 [[ais-bp-glucose-supportive|AIS 血壓與支持處置]]）。
+> - **台灣健保與本土背景**：[[tsgs-evt-2023|TSGS EVT (2023)]] 為台灣健保署擴大給付 24h 內 EVT 之實證依據；亞洲後循環 ICAS/剝離高達 45%–51%，美台逐項對照詳見 [[aha-2026-vs-tsgs-2023-evt|AHA 2026 vs TSGS 2023 EVT 分歧對照]]。
 
 ---
 
@@ -73,12 +75,23 @@ tags:
 
 ## 3. 各大指引建議對照（AHA/ASA vs ESO vs 台灣腦中風學會）
 
-| 比較面向 | AHA/ASA 指引（2026） | ESO 指引 | 台灣腦中風學會指引（TSGS） | 備註／差異重點 |
+> [!danger] 重大證據衝突提醒：單獨後大腦動脈阻塞（PCA Occlusion）
+> - **[[tsgs-evt-2023|台灣腦中風學會 EVT 指引 (2023)]]**（2023 年 9 月發表）依據 2022 TOPMOST 非隨機研究次分析，曾將 24h 內單獨 PCA 阻塞列為 **`COR IIb, LOE B-NR`**（可考慮，預後未明）。
+> - **[[aha-asa-ais-2026|AHA/ASA AIS (2026)]]** 納入 2025 年兩大隨機對照試驗（**ESCAPE-MeVO、DISTAL**）後，已將 **PCA（及非優勢/共優勢 M2、遠端 MCA、ACA）明確翻轉為 `COR 3: No Benefit, LOE A`（不建議常規 EVT）**。床邊決策應以最新隨機試驗實證為主。
+
+> [!warning] 指引／證據分歧：[[aha-asa-ais-2026|AHA/ASA (2026)]] vs [[tsgs-evt-2023|台灣腦中風學會 (2023)]]
+> 台灣 2023 EVT 指引發表於 LASTE、TENSION、ESCAPE-MeVO、DISTAL 等 2024–2025 試驗之前，並作為**台灣健保署擴大給付 24 小時內 EVT 之實證基礎**；美台 6 大分歧與實證演進詳見 [[aha-2026-vs-tsgs-2023-evt|AHA/ASA 2026 vs 台灣腦中風學會 2023 EVT 分歧對照]]。
+
+| 比較面向 | [[aha-asa-ais-2026\|AHA/ASA 指引（2026）]] | ESO 指引 | [[tsgs-evt-2023\|台灣腦中風學會指引（2023）]] | 備註／差異重點 |
 | :--- | :--- | :--- | :--- | :--- |
-| **大梗塞核心（ASPECTS 3–5）** | 0–6h 與 6–24h（精選）皆 COR 1, LOE A | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 待比對 ESO/ESMINT 與台灣指引及健保給付時間窗/ASPECTS 條件 |
-| **極大核心（ASPECTS 0–2）** | 0–6h 精選病患 COR 2a, LOE B-R | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | — |
-| **基底動脈阻塞（BAO）** | 0–24h, NIHSS ≥10, PC-ASPECTS ≥6：COR 1, LOE A | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | 支撐試驗（ATTENTION/BAOCHE）均於中國執行，亞裔 ICAS 比例高（~50%） |
-| **中遠端血管（MeVO）** | 非優勢/共優勢 M2、M3、ACA、PCA：COR 3: No Benefit | `[庫內文獻尚未收錄]` | `[庫內文獻尚未收錄]` | — |
+| **併用 IVT（Bridging）** | `COR 1, LOE A` | `[庫內文獻尚未收錄]` | **`COR I, LOE A`** | **完全一致**：符合 IVT 者不跳過溶栓（6 RCT＋Lancet 2023 統合） |
+| **未等 Creatinine 直接 CTA** | `COR 1, LOE B-NR` | `[庫內文獻尚未收錄]` | **`COR IIa, LOE B-NR`** | 方向一致，AHA 2026 強度升至 COR 1 |
+| **6–24h 影像選案（灌流 vs 側枝）** | 6–24h ASPECTS ≥6 統一 `COR 1, A`；輔助 CTP/MRI `COR 2a, A` | `[庫內文獻尚未收錄]` | DAWN/DEFUSE 3 **`COR I, A`**；MR CLEAN-LATE（CTA-CS 1–3）**`COR IIb, B-R`**（警示 sICH 7% vs 2%） | AHA 2026 降低灌流軟體硬性依賴；TSGS 2023 強調 CTP 選案具較高打通率與較低死亡率 |
+| **大梗塞核心（ASPECTS 3–5 / 50–100 mL）** | 0–6h 與 6–24h（<80 歲無 mass effect）皆 **`COR 1, LOE A`** | `[庫內文獻尚未收錄]` | 6–24h ASPECTS 3–5 或 core 50–100 mL（無 mass effect）**`COR IIb, LOE B-R`**（不建議用 RESCUE-Japan LIMIT 作晚窗選案） | 2023–2024 大核心 RCT 累積推動 AHA 2026 升格；台灣須核對最新健保給付規定 |
+| **極大核心（ASPECTS 0–2）** | 0–6h 精選病患 **`COR 2a, LOE B-R`**（LASTE） | `[庫內文獻尚未收錄]` | `[原文未納入]`（內文註明 core >100 mL 個案少且增所有 ICH 風險，待釐清） | LASTE 發表於台灣 2023 指引之後 |
+| **基底動脈阻塞（BAO）** | **0–24h** NIHSS ≥10, PC-ASPECTS ≥6：**`COR 1, LOE A`**（NIHSS 6–9：`COR 2b`） | `[庫內文獻尚未收錄]` | **0–12h** NIHSS ≥10 **`COR I, A`**；**12–24h** NIHSS ≥6, PC-ASPECTS ≥6 **`COR IIb, B-R`** | 亞洲後循環 ICAS/剝離高達 45%–51%（ATTENTION 44%、BAOCHE 66%），成形/支架率高 |
+| **中遠端血管（MeVO）／單獨 PCA** | 非優勢/共優勢 M2、M3、ACA、**PCA**：**`COR 3: No Benefit, A`** | `[庫內文獻尚未收錄]` | **24h 內單獨 PCA 阻塞 `COR IIb, B-NR`**（依 2022 TOPMOST） | **方向衝突！** 已遭 2025 ESCAPE-MeVO / DISTAL 陰性 RCT 翻轉 |
+| **術中麻醉（GA vs CS）與血壓** | GA/CS **`COR 1, B-R`**；術中/術後 24h `≤180/105`（`2a`）；成功再通 72h 內禁 `<140`（`COR 3: Harm`） | `[庫內文獻尚未收錄]` | GA/CS **`COR IIa, B-R`**；維持術中血壓穩定 **`COR IIa, B-NR`**（MABP <70 >10 min 或 >90 >45 min 不利） | 兩版互補：術中防低血壓波動，成功再通後 72h 禁積極降壓 <140 |
 
 ---
 
@@ -92,7 +105,8 @@ tags:
 ---
 
 ## 5. 相關頁面
-- **相關臨床主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]
+- **相關臨床主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]、[[ais-bp-glucose-supportive|急性缺血性中風血壓、血糖與生理支持處置]]
 - **相關藥物**：[[tenecteplase|Tenecteplase (TNK)]]、[[alteplase|Alteplase (tPA)]]
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-evt-2023|台灣腦中風學會 EVT 指引更新 (2023)]]
+- **跨指引比較**：[[aha-2026-vs-tsgs-2023-evt|AHA/ASA 2026 vs 台灣腦中風學會 2023 EVT 分歧對照]]
 - **上游導覽**：[[overview|腦中風臨床處置總覽]]

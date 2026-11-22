@@ -48,3 +48,33 @@
 - **來源／對象**：`wiki/guidelines/aha-asa-ais-2026.md` → `wiki/topics/ais-prehospital-ed-systems.md`、`wiki/overview.md`、`index.md`
 - **動作摘要**：獲使用者確認後，新建 `wiki/topics/ais-prehospital-ed-systems.md`，更新 `overview.md` 與 `index.md` 將 `aha-asa-ais-2026` 標記為 `active`（100% 全文收錄），並補齊全庫雙向連結。
 - **備註／待確認**：`raw/guidelines/` 內現有兩份 2026 AHA/ASA AIS 檔案已全數編譯與整合完成。
+
+## [2026-11-22] ingest | 台灣腦中風學會 2025 急性缺血性腦中風靜脈血栓溶解治療指引更新（全文）
+- **來源／對象**：`raw/guidelines/2025台灣腦中風學會急性缺血性腦中風靜脈血栓溶解治療指引更新.pdf` → `wiki/guidelines/tsgs-ivt-2025.md`、`index.md`
+- **動作摘要**：完整精讀正文 38 頁（Ch 1–12，含總表一至四、表 2.1、表 9.1–9.2、表 10.1–10.4 與醫療法律章節）並建立 `tsgs-ivt-2025.md`（`status: active`），完整盤點與 `aha-asa-ais-2026.md` 間之 10 項核心臨床與健保/仿單分歧。
+- **備註／待確認**：因偵測到多項美台指引實質分歧（輕型非失能中風、0.6 mg/kg 低劑量、DOAC <24h Xa 抑制劑、手術/TBI/動脈瘤時間與大小門檻、ARIA、Epinephrine IM vs SC、sICH Fibrinogen 目標、IVT 後早期抗血小板），已依半自動把關提交整合更新計畫待使用者確認；其餘 2 份台灣指引（2023 EVT、2020 院前/急診）待後續單篇依序 Ingest。
+
+## [2026-11-23] integrate | 完成 2025 台灣腦中風學會 IVT 指引跨頁整合與美台比較頁建置
+- **來源／對象**：`wiki/guidelines/tsgs-ivt-2025.md` → `wiki/comparisons/aha-2026-vs-tsgs-2025-ivt.md`、`wiki/topics/ais-ivt-thrombolysis.md`、`wiki/interventions/alteplase.md`、`wiki/interventions/tenecteplase.md`、`wiki/topics/ais-antithrombotic-dapt.md`、`wiki/guidelines/aha-asa-ais-2026.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，新建美台 IVT 指引分歧比較頁 `aha-2026-vs-tsgs-2025-ivt.md`，將台灣 2025 IVT 指引、健保給付、0.6 mg/kg 選項、DOAC 分時段規則與禁忌分歧同步整合至既有 IVT／藥物／DAPT 主題頁與 AHA 2026 指引對照欄，補齊全庫雙向連結。
+- **備註／待確認**：`raw/guidelines/` 尚餘 2 份台灣指引（2023 EVT、2020 院前/急診）待單篇依序 Ingest。
+
+## [2026-11-23] ingest | 台灣腦中風學會 2023 急性缺血中風動脈內血栓移除治療指引更新（全文）
+- **來源／對象**：`raw/guidelines/2023急性缺血性中風動脈內機械取栓治療指引.pdf` → `wiki/guidelines/tsgs-evt-2023.md`、`index.md`
+- **動作摘要**：完整精讀正文 15 頁（p.151–165，一至五章，含表一至表六與圖一至圖三）並建立 `tsgs-evt-2023.md`（`status: active`），完整萃取台灣健保 24h EVT 給付背景、術前影像（CTA/CTP/CTA-CS/PC-ASPECTS/PMI）、Bridging 6 RCT、前循環 6–24h 與大核心、後循環 BAO/PCA 與術中麻醉/血壓穩定建議，並盤點與 `aha-asa-ais-2026.md` 間之 6 項核心分歧。
+- **備註／待確認**：偵測到**單獨 PCA 阻塞存在實質方向衝突**（TSGS 2023 `COR IIb, B-NR` vs AHA 2026 `COR 3: No Benefit, A`）及前循環大核心、BAO 12–24h、CTA 不等 Creatinine、術中麻醉等推薦強度差異；已依半自動把關暫停，提交跨頁整合更新計畫待使用者確認。尚餘 1 份台灣指引（2020 院前/急診）待後續單篇 Ingest。
+
+## [2026-11-23] integrate | 完成 2023 台灣腦中風學會 EVT 指引跨頁整合與美台 EVT 比較頁建置
+- **來源／對象**：`wiki/guidelines/tsgs-evt-2023.md` → `wiki/comparisons/aha-2026-vs-tsgs-2023-evt.md`、`wiki/topics/ais-evt-thrombectomy.md`、`wiki/topics/ais-bp-glucose-supportive.md`、`wiki/guidelines/aha-asa-ais-2026.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，新建美台 EVT 指引分歧比較頁 `aha-2026-vs-tsgs-2023-evt.md`，將台灣 2023 EVT 指引、健保 24h 給付背景、單獨 PCA 阻塞方向衝突警示（TSGS 2023 `COR IIb` vs AHA 2026 `COR 3: No Benefit`）、大核心／BAO 12–24h／CTA-CS 差異與術中血壓穩定數據（MABP <70 >10 min 或 >90 >45 min）完整整合至既有主題頁、AHA 2026 指引對照欄與總覽索引。
+- **備註／待確認**：`raw/guidelines/` 僅餘最後 1 份台灣指引（`2020台灣腦中風學會與台灣急診醫學會急性缺血中風病人的院前緊急處置與急診診斷治療指引.pdf`）待單篇 Ingest。
+
+## [2026-11-23] ingest | 台灣腦中風學會與台灣急診醫學會 2020 急性缺血中風院前與急診診斷治療指引（全文）
+- **來源／對象**：`raw/guidelines/2020台灣腦中風學會與台灣急診醫學會急性缺血中風病人的院前緊急處置與急診診斷治療指引.pdf` → `wiki/guidelines/tsgs-tsem-prehospital-ed-2020.md`、`index.md`
+- **動作摘要**：完整精讀正文 11 頁（p.257–267，第 1–13 章）並建立 `tsgs-tsem-prehospital-ed-2020.md`（`status: active`），完整收錄台灣 119 EMS 評估與院前通報、衛福部緊急醫療能力分級評定/區域聯防、醫策會認證/TCPI、DTN <60 min、遠距醫療法規報備、IVT 前血糖與不因 CXR 延遲 IVT，並盤點與 `aha-asa-ais-2026.md` 及台灣後續 2023 EVT / 2025 IVT 指引之演變分歧。
+- **備註／待確認**：偵測到 EMS 繞道策略（RACECAT）、PSC 建立 CTA/MRA（`COR IIb` vs AHA `COR 1`）、Telestroke 決定 IVT（`COR IIa` vs AHA `COR 1`）、以及台灣內部醒後中風 DWI-FLAIR 推薦演變（2020 `COR IIa` → 2025 `COR IIb`）；已依半自動把關暫停，提交跨頁整合更新計畫待使用者確認。此份完成整合後，`raw/guidelines/` 內現有 5 份指引將達成 **100% 收錄**。
+
+## [2026-11-23] integrate | 完成 2020 台灣院前／急診指引跨頁整合（`raw/guidelines/` 現有 5 份指引 100% 完成）
+- **來源／對象**：`wiki/guidelines/tsgs-tsem-prehospital-ed-2020.md` → `wiki/topics/ais-prehospital-ed-systems.md`、`wiki/guidelines/aha-asa-ais-2026.md`、`wiki/overview.md`、`index.md`
+- **動作摘要**：獲使用者確認後，將台灣 119 院前通報、衛福部醫院分級評定與區域聯防、醫策會／TCPI、遠距醫療法規報備、DTN <60 min、不因 CXR 延遲 IVT，以及與 AHA 2026（RACECAT/MSU/院前禁忌/PSC CTA/Telestroke）與台灣後續 2023 EVT / 2025 IVT 之版本演變完整整合至 `ais-prehospital-ed-systems.md`、`aha-asa-ais-2026.md` 與 `overview.md`。
+- **備註／待確認**：`raw/guidelines/` 現有全部 5 份 PDF（2026 AHA/ASA 主文＋勘誤、2025 台灣 IVT、2023 台灣 EVT、2020 台灣院前／急診）皆已完成全文編譯與跨頁整合。

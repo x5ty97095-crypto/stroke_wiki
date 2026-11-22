@@ -81,12 +81,15 @@ tags:
 ## 4. 各大指引立場與本土實務備註
 - **AHA/ASA（2026）**：0–4.5h 以 `0.25 mg/kg`（max 25 mg）與 Alteplase 並列 COR 1, LOE A，單次推注可簡化給藥並縮短 DTN／DIDO 時間（[[aha-asa-ais-2026|AHA/ASA AIS (2026)]] Sec 4.6.2）。
 - **ESO**：`[庫內文獻尚未收錄]`
-- **台灣腦中風學會／健保備註**：`[庫內文獻尚未收錄]`
+- **台灣腦中風學會／健保備註（[[tsgs-ivt-2025|TSGS IVT (2025)]] Ch 10, p.29–33）**：
+  - 0–4.5h `0.25 mg/kg`（max 25 mg）獲 **`COR I, LOE A`**，不建議 `0.4 mg/kg`（`COR III, LOE B-R`）。
+  - **藥動優勢（表 10.1）**：半衰期 17–24 min（Alteplase 4–6 min）、Fibrinogen 消耗較低（`+` vs `+++`）、較不易受 PAI-1 抑制（`+` vs `+++`）。
+  - **台灣法規現況**：表 10.1 標註缺血性腦中風核准為 EMA 2024，**台灣現行核可腦中風溶栓藥仍以 Alteplase 為主**，臨床使用 TNK 須考量台灣法規、仿單適應症與健保給付政策；另 4.5–24h 延長窗僅做文獻回顧，尚未給予正式 COR。
 
 ---
 
 ## 5. 關鍵支撐試驗與關聯頁面
-- **關鍵試驗（指引引用，個別頁待建）**：AcT 等 0–4.5h 第 3 期非劣性 RCT（總 N >6000）、NOR-TEST 2（0.4 mg/kg 陰性/傷害）、TRACE-III（4.5–24h LVO 未行 EVT 陽性）、TIMELESS（4.5–24h 快速 EVT 陰性）、TWIST（醒後 NCCT 陰性）。
+- **關鍵試驗（指引引用，個別頁待建）**：AcT、TRACE-2、ATTEST-2、TASTE、ORIGINAL（0–4.5h 五大 Phase III 非劣性 RCT）、NOR-TEST 2（0.4 mg/kg 陰性/傷害）、EXTEND-IA TNK（橋接早期再通較高）、TRACE-III（4.5–24h LVO 未行 EVT 陽性）、TIMELESS（4.5–24h 快速 EVT 陰性）、TWIST（醒後 NCCT 陰性）。
 - **所屬臨床主題**：[[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]、[[ais-evt-thrombectomy|急性缺血性中風機械取栓（AIS EVT）]]
-- **同類對照藥物**：[[alteplase|Alteplase (tPA)]]
-- **相關指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]
+- **同類對照與指引比較**：[[alteplase|Alteplase (tPA)]]、[[aha-2026-vs-tsgs-2025-ivt|AHA/ASA 2026 vs 台灣腦中風學會 2025 IVT 分歧對照]]
+- **相關指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]

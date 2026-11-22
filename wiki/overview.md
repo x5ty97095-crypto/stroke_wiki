@@ -4,7 +4,7 @@ type: overview
 domain:
   - general
 status: active
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 aliases:
   - Stroke Management Overview
   - 腦中風處置總覽
@@ -21,7 +21,7 @@ tags:
 ---
 
 ## 1. 急性缺血性中風（AIS）
-- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（`active`：**100% 全文收錄完成**，含 2026/08 勘誤核對）*（待收錄：ESO、台灣腦中風學會 AIS 指引）*
+- **核心指引**：[[aha-asa-ais-2026|AHA/ASA AIS 臨床指引 (2026)]]（`active`，100% 全文）、[[tsgs-ivt-2025|台灣腦中風學會 IVT 指引更新 (2025)]]（`active`，Ch 1–12 全文）、[[tsgs-evt-2023|台灣腦中風學會 EVT 指引更新 (2023)]]（`active`，一至五章全文）、[[tsgs-tsem-prehospital-ed-2020|台灣院前與急診中風指引 (2020)]]（`active`，Ch 1–13 全文）*（待收錄：ESO 指引）*
 - **臨床處置主題（`wiki/topics/`）**：
   - [[ais-prehospital-ed-systems|急性缺血性中風院前分流、急診評估與中風照護體系]]（時間指標、EMS 轉送/RACECAT、MSU、Telestroke、NIHSS/ECG/Troponin、院前禁忌）
   - [[ais-ivt-thrombolysis|急性缺血性中風靜脈溶栓治療（AIS IVT）]]（0–4.5h、延長窗、禁忌梯度 Table 8、併發症處置）
@@ -71,4 +71,5 @@ tags:
 ---
 
 ## 5. 重大臨床爭議與跨文獻比較（`wiki/comparisons/`）
-- *（尚無已建立比較頁；可於批次 Ingest 或高價值 Query 後寫回）*
+- [[aha-2026-vs-tsgs-2025-ivt|AHA/ASA 2026 vs 台灣腦中風學會 2025：AIS 靜脈溶栓指引分歧對照]]（涵蓋健保給付、Alteplase 0.6 vs 0.9 mg/kg、TNK、DOAC、禁忌門檻、ARIA、兒童與台灣法律實務）
+- [[aha-2026-vs-tsgs-2023-evt|AHA/ASA 2026 vs 台灣腦中風學會 2023：AIS 機械取栓指引分歧對照]]（涵蓋健保 24h 給付背景、單獨 PCA 阻塞方向衝突、大核心 ASPECTS 3–5 / 0–2、BAO 12–24h、CTA-CS 與術中/術後血壓管理）

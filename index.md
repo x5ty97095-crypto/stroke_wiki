@@ -1,7 +1,7 @@
 ---
 title: 腦中風臨床處置知識庫總目錄
 type: index
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 ---
 
 # 知識庫總目錄（Index）
@@ -40,6 +40,9 @@ last_updated: 2026-11-22
 | 頁面 | 組織 | 領域 | 年份 | 狀態 | 單行摘要 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | [[aha-asa-ais-2026\|AHA/ASA AIS 臨床指引 (2026)]] | AHA/ASA | `ais`、`secondary-prevention`、`inpatient-care`、`general` | 2026 | `active` | 2026 最新版 AIS 指引**全文 100% 收錄**（Sec 1–6：院前/MSU/EMS 轉送、影像、血壓/血糖、IVT/TNK/Table 8、EVT/大核心/BAO/MeVO/兒童、DAPT/AF 抗凝、住院照護與惡性腦水腫；已全數核對 2026/08 勘誤）。 |
+| [[tsgs-ivt-2025\|台灣腦中風學會 IVT 指引更新 (2025)]] | TSGS（台灣腦中風學會） | `ais` | 2025 | `active` | 2025 台灣 IVT 全文指引（Ch 1–12）：含 2024 健保開放 4.5h、Alteplase 0.6 mg/kg 選項、DOAC 分時段建議、TNK 實證、總表三/四檢核表、台灣同意書與法律實務，及與 AHA 2026 之逐項分歧對照。 |
+| [[tsgs-evt-2023\|台灣腦中風學會 EVT 指引更新 (2023)]] | TSGS（台灣腦中風學會） | `ais` | 2023 | `active` | 2023 台灣 EVT 全文指引（一至五章；健保擴大給付 24h EVT 實證依據）：術前 CTA/灌流/CTA-CS、Bridging 6 RCT、前循環 6–24h 與大核心、後循環 BAO/PCA、術中麻醉與血壓穩定，及與 AHA 2026 之重大分歧對照。 |
+| [[tsgs-tsem-prehospital-ed-2020\|台灣院前與急診中風指引 (2020)]] | TSGS／TSEM（台灣腦中風學會／台灣急診醫學會） | `ais`、`general` | 2020 | `active` | 2020 台灣院前與急診全文指引（Ch 1–13）：119 EMS 評估與院前通報、衛福部醫院分級評定與區域聯防、醫策會認證/TCPI、DTN <60 min、遠距醫療法規、IVT 前必測血糖與不因 CXR 延遲 IVT，及與 AHA 2026/台灣新版之分歧演變。 |
 
 ---
 
@@ -54,4 +57,5 @@ last_updated: 2026-11-22
 ## 臨床爭議與比較分析（`wiki/comparisons/`）
 | 頁面 | 領域 | 狀態 | 單行摘要 |
 | :--- | :--- | :--- | :--- |
-| *（尚無已收錄頁面）* | — | — | — |
+| [[aha-2026-vs-tsgs-2025-ivt\|AHA/ASA 2026 vs 台灣腦中風學會 2025 IVT 分歧對照]] | `ais` | `active` | 正面對照美台兩版 IVT 指引之 10 大分歧（健保/仿單、Alteplase 0.6 mg/kg、TNK、輕型非失能、DOAC、禁忌門檻、ARIA、併發症與法律實務）。 |
+| [[aha-2026-vs-tsgs-2023-evt\|AHA/ASA 2026 vs 台灣腦中風學會 2023 EVT 分歧對照]] | `ais` | `active` | 正面對照美台兩版 EVT 指引之核心分歧與 2023→2026 實證演進（健保 24h 給付、單獨 PCA 阻塞方向衝突、大核心 ASPECTS 3–5/0–2、BAO 12–24h、CTA-CS 與術中/術後血壓）。 |

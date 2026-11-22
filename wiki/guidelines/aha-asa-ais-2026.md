@@ -24,7 +24,7 @@ chapters_ingested:
   - "Sec 5 In-Hospital Management of AIS: General Supportive Care (5.1–5.7; e389–e397)"
   - "Sec 6 In-Hospital Management of AIS: Treatment of Acute Complications (6.1–6.5; e397–e401)"
 chapters_pending: []
-last_updated: 2026-11-22
+last_updated: 2026-11-23
 aliases:
   - "AHA/ASA AIS 2026"
   - "2026 AHA/ASA Acute Ischemic Stroke Guideline"
@@ -523,12 +523,20 @@ COR 與 LOE 獨立判定（任何 COR 皆可搭配任何 LOE）：
 ---
 
 ## 4. 與其他主要指引之差異（AHA/ASA vs ESO vs 台灣腦中風學會）
-> [!info] 跨指引比對待補
-> 本知識庫目前僅收錄 AHA/ASA 2026 AIS 指引（區塊 A）。待後續收錄 ESO 與台灣腦中風學會（TSGS）指引後，需重點對照以下項目之差異與台灣健保給付規範：
-> 1. Tenecteplase 0.25 mg/kg 是否與 Alteplase 並列第一線及健保給付適應症。
-> 2. DOAC 暴露（<48h）之溶栓策略（AHA 2026 移至相對禁忌＋個體化評估 vs ESO/台灣指引之 Anti-Xa／反轉劑條件）。
-> 3. 延長窗 IVT（4.5–9h 與 4.5–24h TRACE-III）及大梗塞核心 EVT（ASPECTS 3–5 與 0–2）之推薦強度。
-> 4. 中遠端血管（MeVO/M2）取栓建議。
+> [!warning] 跨指引差異摘要（已對照台灣三大指引：[[tsgs-ivt-2025|TSGS IVT (2025)]]、[[tsgs-evt-2023|TSGS EVT (2023)]]、[[tsgs-tsem-prehospital-ed-2020|TSGS/TSEM 院前與急診 (2020)]]；ESO 指引待補）
+> - **IVT 領域核心差異**（完整 10 項逐條比對詳見 [[aha-2026-vs-tsgs-2025-ivt|AHA/ASA 2026 vs 台灣腦中風學會 2025 IVT 分歧對照]]）：
+>   1. **Alteplase 劑量與健保**：台灣保留低劑量 `0.6 mg/kg`（COR IIb），2024 健保開放至 4.5h 但 >4.5h 仿單未核准且不給付；TNK 0.25 mg/kg 實證同達 COR I 但尚未獲 TFDA 腦中風仿單核可。
+>   2. **輕型非失能中風**：AHA 2026 列 `COR 3: No Benefit`；台灣 2025 雖以最佳內科優先但保留醫師個體化評估（`COR IIa`）。
+>   3. **DOAC 暴露（<48h）**：AHA 2026 統一列相對禁忌（個體化評估）；台灣明確切分 <24h Xa 抑制劑不建議（`COR III`）、24–48h Xa 抑制劑 `COR IIb`、Dabigatran 先反轉 `COR IIa`。
+>   4. **禁忌門檻與併發症**：台灣總表三對腦/脊椎手術或嚴重 TBI（<3 個月 vs AHA 14 天）與 >1 cm 未破裂動脈瘤較保守；AHA 2026 則已正式將 ARIA 列絕對禁忌、納入兒童 IVT（COR 2b）並將血管性水腫 Epinephrine 修正為 IM。
+> - **EVT 領域核心差異**（完整逐條比對詳見 [[aha-2026-vs-tsgs-2023-evt|AHA/ASA 2026 vs 台灣腦中風學會 2023 EVT 分歧對照]]）：
+>   1. **單獨 PCA 阻塞（方向衝突）**：台灣 2023 指引依 2022 TOPMOST 列 `COR IIb, B-NR`；AHA 2026 納入 2025 ESCAPE-MeVO / DISTAL 後翻轉為 **`COR 3: No Benefit, LOE A`**。
+>   2. **大梗塞核心與 BAO 12–24h 升格**：AHA 2026 將 6–24h 精選 ASPECTS 3–5 與 0–24h BAO（NIHSS ≥10）統一升為 **`COR 1, A`**，並新增 0–6h ASPECTS 0–2（`COR 2a`）；台灣 2023 指引當時皆列 `COR IIb`（且未納 ASPECTS 0–2）。
+>   3. **術前影像、麻醉與血壓**：AHA 2026 將未等 Creatinine 直接 CTA 與 GA/CS 升為 `COR 1`（台灣 2023 均為 `COR IIa`），並新增成功再通後 72h 禁積極降 SBP <140（`COR 3: Harm`）；台灣 2023 則另強調術中避免低血壓波動（MABP <70 >10 min 或 >90 >45 min 不利，`COR IIa`）。
+> - **院前與急診體系領域**（對照 [[tsgs-tsem-prehospital-ed-2020|台灣院前與急診指引 (2020)]]，詳見 [[ais-prehospital-ed-systems|院前與急診體系主題頁]]）：
+>   1. **EMS 繞道與 MSU／院前禁忌**：AHA 2026 納入 RACECAT（成熟體系繞道 45–60 min 送遙遠 TSC 列 `COR 3: No Benefit`）、MSU（`COR 1, A`）與院前三大禁忌（GTN/RIC/現場降壓 130–140），並明定 DIDO ≤120 min；台灣 2020 指引則著重 119 院前通報、衛福部醫院分級與區域聯防、醫策會／TCPI、DTN <60 min 及不因 CXR 延遲 IVT。
+>   2. **PSC 血管攝影與 Telestroke 升格**：AHA 2026 將 PSC 快速執行判讀 CTA/MRA 與 Telestroke 決定 IVT 升為 `COR 1`（台灣 2020 分別為 `COR IIb` 與 `COR IIa` 並強調衛福部法規報備）。
+> - **ESO 指引**：待後續收錄補齊對照。
 
 ---
 

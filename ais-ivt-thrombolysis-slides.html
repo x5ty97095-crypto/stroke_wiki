@@ -1,0 +1,1787 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>急性缺血性中風靜脈溶栓治療（AIS IVT）— 離線教學簡報</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --surface: #ffffff;
+    --surface-alt: #f3ede2;
+    --primary: #1b4332;
+    --primary-soft: #d8f3dc;
+    --accent: #c2410c;
+    --accent-soft: #ffedd5;
+    --warning: #b45309;
+    --warning-soft: #fef3c7;
+    --danger: #b91c1c;
+    --danger-soft: #fee2e2;
+    --text: #1c1917;
+    --muted: #57534e;
+    --border: #dfd6c7;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    background: #e7e0d3;
+    color: var(--text);
+    font-family: "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: hidden;
+  }
+
+  .deck-viewport {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .stage {
+    width: 1280px;
+    height: 720px;
+    transform-origin: center center;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.65);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Gate 3 contract: exact 1280x720, .slide hidden unless .active */
+  section.slide {
+    display: none;
+    width: 1280px;
+    height: 720px;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: var(--bg);
+    color: var(--text);
+    padding: 36px 52px 24px;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  section.slide.active {
+    display: flex;
+  }
+
+  /* Cover Slide (Editorial Warm Forest Green + Warm Ivory) */
+  section.slide.slide-cover {
+    background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 62%, #3b7a57 100%);
+    padding: 58px 72px 34px;
+    color: #faf7f2;
+  }
+  .cover-tag {
+    display: inline-block;
+    padding: 7px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: #ecfdf5;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+  }
+  .cover-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 44px;
+  }
+  .cover-title {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
+  .cover-sub {
+    font-size: 23px;
+    color: #d8f3dc;
+    line-height: 1.5;
+    max-width: 720px;
+  }
+  .cover-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+  }
+  .cover-pill {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.26);
+    font-size: 15px;
+    color: #ffffff;
+    font-weight: 600;
+  }
+  .cover-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.26);
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13.5px;
+    color: #e2f2e8;
+  }
+
+  /* Standard Content Slide Header & Footer */
+  .slide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 12px;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+  .kicker {
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .slide-h2 {
+    font-size: 31px;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1.2;
+  }
+  .badge {
+    padding: 6px 13px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge-primary { background: var(--primary-soft); color: var(--primary); border: 1px solid #95d5b2; }
+  .badge-accent  { background: var(--accent-soft);  color: var(--accent);  border: 1px solid #fdba74; }
+  .badge-warning { background: var(--warning-soft); color: var(--warning); border: 1px solid #fcd34d; }
+  .badge-danger  { background: var(--danger-soft);  color: var(--danger);  border: 1px solid #fca5a5; }
+
+  .slide-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+    margin: 14px 0 12px;
+    min-height: 0;
+  }
+
+  .slide-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12.5px;
+    color: var(--muted);
+    flex-shrink: 0;
+  }
+
+  /* Reusable Layout Components */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 16px 20px;
+    box-shadow: 0 3px 10px rgba(28, 25, 23, 0.04);
+  }
+  .card-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .analogy-bar {
+    background: linear-gradient(90deg, #e8f5e9, #fff7ed);
+    border: 1px solid #b7e4c7;
+    border-radius: 11px;
+    padding: 12px 18px;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--text);
+  }
+  .analogy-bar strong { color: var(--primary); }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .grid-2-wide { display: grid; grid-template-columns: 1.32fr 0.98fr; gap: 22px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+
+  ul.clean-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    font-size: 15.5px;
+    line-height: 1.45;
+  }
+  ul.clean-list li {
+    padding-left: 18px;
+    position: relative;
+    color: var(--text);
+  }
+  ul.clean-list li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+  }
+  ul.clean-list.list-accent li::before { color: var(--accent); }
+  ul.clean-list.list-warning li::before { color: var(--warning); }
+  ul.clean-list.list-danger li::before { color: var(--danger); }
+
+  .callout {
+    padding: 11px 16px;
+    border-radius: 10px;
+    font-size: 14.5px;
+    line-height: 1.45;
+  }
+  .callout-danger { background: var(--danger-soft); border-left: 4px solid var(--danger); color: #7f1d1d; }
+  .callout-danger strong { color: var(--danger); }
+  .callout-warning { background: var(--warning-soft); border-left: 4px solid var(--warning); color: #78350f; }
+  .callout-warning strong { color: var(--warning); }
+  .callout-accent { background: #ecfdf5; border-left: 4px solid #15803d; color: #14532d; }
+  .callout-accent strong { color: #15803d; }
+
+  /* Tables */
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+  }
+  table.data-table th {
+    text-align: left;
+    padding: 10px 12px;
+    background: var(--surface-alt);
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--border);
+  }
+  table.data-table td {
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.4;
+    color: var(--text);
+    vertical-align: top;
+  }
+  table.data-table tr:last-child td { border-bottom: none; }
+  .hl-primary { color: var(--primary); font-weight: 700; }
+  .hl-accent  { color: var(--accent); font-weight: 700; }
+  .hl-warning { color: var(--warning); font-weight: 700; }
+  .hl-danger  { color: var(--danger); font-weight: 700; }
+
+  /* BATHE pills */
+  .bathe-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .bathe-pill {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+    text-align: center;
+  }
+  .bathe-letter {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primary);
+  }
+  .bathe-label {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 600;
+    margin-top: 2px;
+  }
+
+  /* Traffic light headers */
+  .tl-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .tl-red    { border-top: 5px solid var(--danger); }
+  .tl-yellow { border-top: 5px solid var(--warning); }
+  .tl-green  { border-top: 5px solid var(--accent); }
+  .tl-head {
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  /* Summary 5-point rows */
+  .summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+  .summary-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 11px 18px;
+  }
+  .summary-num {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--primary-soft);
+    border: 1.5px solid var(--primary);
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .summary-text {
+    font-size: 15.5px;
+    line-height: 1.42;
+    color: var(--text);
+  }
+  .summary-text strong { color: var(--primary); }
+
+  /* References */
+  .ref-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: 10px;
+    padding: 12px 16px;
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .ref-item .ref-doi {
+    display: inline-block;
+    margin-top: 3px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+  }
+  .chip-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .trial-chip {
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* Compact Table for Page 9 */
+  table.compact-table th { padding: 11px 14px; font-size: 15px; }
+  table.compact-table td { padding: 11px 14px; font-size: 14.6px; line-height: 1.44; }
+
+  /* Step boxes for Page 7 & Page 8 */
+  .step-box {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 11px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .step-tag {
+    padding: 3px 9px;
+    border-radius: 6px;
+    font-size: 12.5px;
+    font-weight: 800;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .step-tag-primary { background: var(--primary-soft); color: var(--primary); }
+  .step-tag-accent  { background: var(--accent-soft);  color: var(--accent); }
+  .step-tag-warning { background: var(--warning-soft); color: var(--warning); }
+  .step-tag-danger  { background: var(--danger-soft);  color: var(--danger); }
+  .step-content {
+    font-size: 14.8px;
+    line-height: 1.42;
+    color: var(--text);
+  }
+  .step-content .sub {
+    display: block;
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  .dose-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    color: #0369a1;
+    font-weight: 700;
+    font-size: 13.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+
+  /* Agenda Module Cards (P2) */
+  .agenda-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .agenda-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 8px;
+  }
+  .agenda-title {
+    font-size: 17.5px;
+    font-weight: 800;
+    color: var(--text);
+  }
+  .agenda-links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    flex: 1;
+    justify-content: center;
+  }
+  .agenda-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 11px;
+    border-radius: 8px;
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-size: 14.5px;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.15s ease, background 0.15s ease;
+  }
+  .agenda-row:hover {
+    border-color: var(--primary);
+    background: var(--primary-soft);
+  }
+  .agenda-pg {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12.5px;
+    font-weight: 800;
+    color: var(--primary);
+    background: var(--primary-soft);
+    padding: 2px 7px;
+    border-radius: 5px;
+    min-width: 36px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  /* Glossary 3-column (P3) */
+  .gloss-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 13px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .gloss-head {
+    font-size: 15.5px;
+    font-weight: 800;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+  .gloss-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    gap: 4px;
+  }
+  .gloss-row {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 8px;
+    align-items: baseline;
+    font-size: 12.6px;
+    line-height: 1.35;
+    padding: 3px 0;
+    border-bottom: 1px dashed rgba(148, 163, 184, 0.16);
+  }
+  .gloss-row:last-child { border-bottom: none; }
+  .gloss-abbr {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-weight: 800;
+    color: var(--primary);
+    font-size: 12.3px;
+  }
+  .gloss-desc {
+    color: var(--text);
+  }
+
+  /* Redesigned AIS Intro panels (P4) */
+  .mech-box {
+    border-radius: 11px;
+    padding: 12px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    flex: 1;
+  }
+  .mech-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .fast-card {
+    background: var(--surface-alt);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .fast-letter {
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 900;
+    flex-shrink: 0;
+  }
+
+  /* Floating Navigation HUD (outside section.slide) */
+  .nav-hud {
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid #334155;
+    padding: 7px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    opacity: 0.45;
+    transition: opacity 0.2s ease;
+  }
+  .nav-hud:hover { opacity: 1; }
+  .nav-btn {
+    background: #1e293b;
+    color: var(--text);
+    border: 1px solid #475569;
+    border-radius: 999px;
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .nav-btn:hover { background: #334155; color: #fff; }
+  .nav-counter {
+    font-size: 13px;
+    font-weight: 700;
+    color: #38bdf8;
+    min-width: 52px;
+    text-align: center;
+  }
+  .nav-dots {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #475569;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+  .nav-dot.active {
+    background: #38bdf8;
+    transform: scale(1.25);
+  }
+</style>
+</head>
+<body>
+<div class="deck-viewport">
+  <div class="stage" id="stage">
+
+    <!-- ==================== PAGE 1: COVER ==================== -->
+    <section class="slide slide-cover active" data-page="1">
+      <div>
+        <span class="cover-tag">STROKE CLINICAL GUIDE · 初學者教學入門</span>
+      </div>
+      <div class="cover-main">
+        <div>
+          <h1 class="cover-title">急性缺血性中風<br/>靜脈溶栓治療（AIS IVT）</h1>
+          <p class="cover-sub">從「搶通腦血管」白話概念到最新美台臨床指引實務入門</p>
+          <div class="cover-pills">
+            <span class="cover-pill">AHA/ASA AIS 臨床指引（2026）</span>
+            <span class="cover-pill">台灣腦中風學會 IVT 指引更新（2025）</span>
+            <span class="cover-pill">共 14 頁（含目錄、縮寫表與參考文獻）</span>
+          </div>
+        </div>
+        <svg width="270" height="270" viewBox="0 0 270 270" aria-hidden="true">
+          <defs>
+            <linearGradient id="covGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#38bdf8" />
+              <stop offset="100%" stop-color="#34d399" />
+            </linearGradient>
+          </defs>
+          <circle cx="135" cy="135" r="118" fill="rgba(56,189,248,0.08)" stroke="rgba(56,189,248,0.4)" stroke-width="2" />
+          <circle cx="135" cy="135" r="88" fill="none" stroke="rgba(52,211,153,0.32)" stroke-width="2" stroke-dasharray="6 6" />
+          <path d="M48 156 C92 156, 98 106, 135 106 C172 106, 178 156, 222 156" fill="none" stroke="url(#covGrad)" stroke-width="11" stroke-linecap="round"/>
+          <circle cx="135" cy="106" r="15" fill="#f59e0b" />
+          <line x1="135" y1="135" x2="135" y2="70" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+          <line x1="135" y1="135" x2="178" y2="152" stroke="#f59e0b" stroke-width="4" stroke-linecap="round"/>
+          <text x="135" y="214" text-anchor="middle" fill="#e0f2fe" font-size="18" font-weight="700">0–4.5h 黃金時間窗</text>
+        </svg>
+      </div>
+      <div class="cover-footer">
+        <span>臨床免責聲明：本簡報僅供醫療教學與文獻整理參考，不得替代床邊臨床判斷或所屬醫院標準作業規範（SOP）。</span>
+        <span>Page 1 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 2: AGENDA ==================== -->
+    <section class="slide" data-page="2">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">02 · AGENDA &amp; LEARNING MAP</div>
+          <h2 class="slide-h2">簡報目錄與學習路徑（Agenda）</h2>
+        </div>
+        <span class="badge badge-primary">4 大學習單元｜點擊列即可跳頁</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 13px;">
+        <div class="grid-2" style="flex: 1; align-items: stretch; gap: 16px;">
+          <!-- Module 1 -->
+          <div class="agenda-card" style="border-top: 4px solid var(--primary);">
+            <div class="agenda-head">
+              <span class="agenda-title">單元 1｜專有名詞、中風簡介與啟動</span>
+              <span class="badge badge-primary" style="font-size: 12.5px; padding: 4px 10px;">P3–P5</span>
+            </div>
+            <div class="agenda-links">
+              <button type="button" class="agenda-row" onclick="goToSlide(3)"><span class="agenda-pg">P3</span><span>專有名詞與臨床縮寫中英對照表（Glossary）</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(4)"><span class="agenda-pg">P4</span><span>認識急性缺血性中風（AIS）：機轉、警訊與搶救概念</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(5)"><span class="agenda-pg">P5</span><span>為什麼分秒必爭？IVT 核心概念與急診啟動流程</span></button>
+            </div>
+          </div>
+
+          <!-- Module 2 -->
+          <div class="agenda-card" style="border-top: 4px solid var(--accent);">
+            <div class="agenda-head">
+              <span class="agenda-title">單元 2｜時間窗、選案與兩大藥物</span>
+              <span class="badge badge-accent" style="font-size: 12.5px; padding: 4px 10px;">P6–P8</span>
+            </div>
+            <div class="agenda-links">
+              <button type="button" class="agenda-row" onclick="goToSlide(6)"><span class="agenda-pg">P6</span><span>時間就是大腦：0–4.5 小時黃金窗到 24 小時延長窗</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(7)"><span class="agenda-pg">P7</span><span>不是中風就一定要打！BATHE 明確失能判斷</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(8)"><span class="agenda-pg">P8</span><span>兩大主角對決：Tenecteplase (TNK) vs Alteplase (tPA)</span></button>
+            </div>
+          </div>
+
+          <!-- Module 3 -->
+          <div class="agenda-card" style="border-top: 4px solid var(--danger);">
+            <div class="agenda-head">
+              <span class="agenda-title">單元 3｜打藥禁忌、監測與緊急併發症</span>
+              <span class="badge badge-danger" style="font-size: 12.5px; padding: 4px 10px;">P9–P11</span>
+            </div>
+            <div class="agenda-links">
+              <button type="button" class="agenda-row" onclick="goToSlide(9)"><span class="agenda-pg">P9</span><span>打藥前的紅綠燈檢核：絕對禁忌 vs 相對禁忌 vs 迷思破解</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(10)"><span class="agenda-pg">P10</span><span>給藥前後 24 小時守護網：血壓紅線與監測節奏</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(11)"><span class="agenda-pg">P11</span><span>遇到緊急併發症怎麼辦？腦出血與口舌血管性水腫急救</span></button>
+            </div>
+          </div>
+
+          <!-- Module 4 -->
+          <div class="agenda-card" style="border-top: 4px solid var(--warning);">
+            <div class="agenda-head">
+              <span class="agenda-title">單元 4｜台灣實務、口訣回顧與文獻</span>
+              <span class="badge badge-warning" style="font-size: 12.5px; padding: 4px 10px;">P12–P14</span>
+            </div>
+            <div class="agenda-links">
+              <button type="button" class="agenda-row" onclick="goToSlide(12)"><span class="agenda-pg">P12</span><span>國際指引 vs 台灣實務：臨床必知的 6 大美台差異與法規</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(13)"><span class="agenda-pg">P13</span><span>重點回顧：初學者必記 5 大實戰口訣與免責聲明</span></button>
+              <button type="button" class="agenda-row" onclick="goToSlide(14)"><span class="agenda-pg">P14</span><span>參考文獻與核心試驗索引（References）</span></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout callout-accent" style="display:flex; justify-content:space-between; align-items:center; padding: 10px 16px;">
+          <span><strong>📖 初學者貼心工具（P3）：</strong>下一頁先附上涵蓋全簡報（P1–P14）所有臨床英文縮寫與專有名詞中英對照表，閱讀過程隨時可翻回查閱。</span>
+          <button type="button" class="nav-btn" onclick="goToSlide(3)" style="background: #15803d; border-color: #15803d; color: #ffffff;">前往 P3 縮寫表 →</button>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>導覽提示：亦可使用鍵盤 ← / → / Space 翻頁，或按 F 進入全螢幕簡報模式</span>
+        <span>Page 2 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 3: GLOSSARY ==================== -->
+    <section class="slide" data-page="3">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">03 · ABBREVIATIONS &amp; GLOSSARY</div>
+          <h2 class="slide-h2">專有名詞與臨床縮寫中英對照表（Glossary）</h2>
+        </div>
+        <span class="badge badge-accent">涵蓋全簡報所有專有縮寫</span>
+      </div>
+
+      <div class="slide-body" style="gap: 10px;">
+        <div class="grid-3" style="flex: 1; align-items: stretch; gap: 15px;">
+          <!-- Group 1 -->
+          <div class="gloss-card" style="border-top: 4px solid var(--primary);">
+            <div class="gloss-head" style="color: var(--primary);">🧠 疾病、嚴重度與評估量表</div>
+            <div class="gloss-list">
+              <div class="gloss-row"><span class="gloss-abbr">AIS</span><span class="gloss-desc">Acute Ischemic Stroke（急性缺血性中風）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">ICH / sICH</span><span class="gloss-desc">腦出血／症狀性腦出血</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">LVO</span><span class="gloss-desc">Large Vessel Occlusion（大血管阻塞）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">FAST / CPSS</span><span class="gloss-desc">臉手說時／辛辛那提院前中風量表</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">LKW</span><span class="gloss-desc">Last Known Well（最後正常時間）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">NIHSS</span><span class="gloss-desc">美國國衛院中風嚴重度量表</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">BATHE</span><span class="gloss-desc">沐浴/行走/如廁/衛生/進食失能檢核</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">mRS</span><span class="gloss-desc">改良式蘭金氏量表（0–1 極佳預後）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">TBI / STEMI</span><span class="gloss-desc">創傷性腦傷／ST 段上升心肌梗塞</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">ARIA / CMB</span><span class="gloss-desc">類澱粉相關影像異常／腦微出血</span></div>
+            </div>
+          </div>
+
+          <!-- Group 2 -->
+          <div class="gloss-card" style="border-top: 4px solid var(--accent);">
+            <div class="gloss-head" style="color: var(--accent);">💉 治療藥物、給藥途徑與監測</div>
+            <div class="gloss-list">
+              <div class="gloss-row"><span class="gloss-abbr">IVT / EVT</span><span class="gloss-desc">靜脈溶栓治療／血管內機械取栓</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">TNK / tPA</span><span class="gloss-desc">Tenecteplase／Alteplase 溶栓藥</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">SAPT / DAPT</span><span class="gloss-desc">單一／雙重抗血小板治療</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">DOAC / Xa</span><span class="gloss-desc">直接口服抗凝劑／第十凝血因子抑制劑</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">GTN / ACEi</span><span class="gloss-desc">硝化甘油／血管張力素轉換酶抑制劑</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">IV / IM / SC</span><span class="gloss-desc">靜脈注射／肌肉注射／皮下注射</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">DTN</span><span class="gloss-desc">Door-to-Needle（到院至打藥時間）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">SBP</span><span class="gloss-desc">Systolic Blood Pressure（收縮壓）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">PLT/PT/INR/aPTT</span><span class="gloss-desc">血小板與三項凝血功能檢驗</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">ICU / ED</span><span class="gloss-desc">加護病房／急診室</span></div>
+            </div>
+          </div>
+
+          <!-- Group 3 -->
+          <div class="gloss-card" style="border-top: 4px solid var(--warning);">
+            <div class="gloss-head" style="color: var(--warning);">🩻 腦部影像、實證等級與組織</div>
+            <div class="gloss-list">
+              <div class="gloss-row"><span class="gloss-abbr">CT / NCCT</span><span class="gloss-desc">電腦斷層／無顯影劑頭部 CT</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">CTA / CTP</span><span class="gloss-desc">CT 血管攝影／CT 灌流影像</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">MRI / MRA / MRP</span><span class="gloss-desc">磁振造影／磁振血管／磁振灌流</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">DWI-FLAIR</span><span class="gloss-desc">擴散加權與液體衰減反轉恢復 MRI</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">COR / LOE</span><span class="gloss-desc">建議等級（1/2a/2b/3）／證據等級</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">RCT / OR</span><span class="gloss-desc">隨機對照試驗／勝算比（Odds Ratio）</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">GWTG</span><span class="gloss-desc">美國心臟學會中風品質登錄計畫</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">AHA / ASA</span><span class="gloss-desc">美國心臟學會／美國中風學會</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">TSGS / TSEM</span><span class="gloss-desc">台灣腦中風學會／台灣急診醫學會</span></div>
+              <div class="gloss-row"><span class="gloss-abbr">SDM / SOP</span><span class="gloss-desc">醫病共享決策／院內標準作業規範</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>涵蓋全簡報（P1–P14）所有臨床縮寫；代表性臨床試驗縮寫（AcT、WAKE-UP、EXTEND 等）詳見 P14 參考文獻</span>
+        <span>Page 3 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 4: WHAT IS AIS ==================== -->
+    <section class="slide" data-page="4">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">04 · WHAT IS ACUTE ISCHEMIC STROKE?</div>
+          <h2 class="slide-h2">認識急性缺血性中風（AIS）：機轉、警訊與搶救概念</h2>
+        </div>
+        <span class="badge badge-primary">辨識中風 → 立即打 119｜COR 1 / I</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 14px;">
+        <div class="grid-2" style="flex: 1; align-items: stretch; gap: 18px;">
+          <!-- Left: Two native flex panels with embedded SVGs (zero top/bottom void) -->
+          <div class="card" style="display:flex; flex-direction:column; gap: 12px; padding: 15px 18px;">
+            <div class="card-title" style="margin-bottom: 0; font-size: 16.5px;">🧠 缺血 vs 出血：為何到院第一件事是照 CT？</div>
+
+            <div class="mech-box" style="background: #f0fdf4; border: 1.5px solid #86efac;">
+              <div style="font-size: 15.5px; font-weight: 800; color: var(--primary);">缺血性中風（AIS）— 腦血管「塞住了」</div>
+              <div class="mech-row">
+                <svg viewBox="0 0 210 56" width="210" height="56" style="flex-shrink:0;" role="img" aria-label="血栓堵塞腦血管形成壞死核心與可挽救半影區">
+                  <rect x="2" y="16" width="96" height="24" rx="12" fill="#dcfce7" stroke="#15803d" stroke-width="1.5" />
+                  <ellipse cx="52" cy="28" rx="19" ry="9" fill="#f59e0b" />
+                  <text x="52" y="32" text-anchor="middle" fill="#0b132b" font-size="11" font-weight="800">血栓</text>
+                  <path d="M103 28 L120 28" stroke="#34d399" stroke-width="2.5" />
+                  <polygon points="120,23 128,28 120,33" fill="#34d399" />
+                  <ellipse cx="168" cy="28" rx="38" ry="22" fill="#bbf7d0" stroke="#15803d" stroke-width="1.6" stroke-dasharray="4 3" />
+                  <ellipse cx="164" cy="28" rx="16" ry="10" fill="#475569" />
+                  <text x="164" y="32" text-anchor="middle" fill="#f8fafc" font-size="10" font-weight="700">核心</text>
+                </svg>
+                <div style="font-size: 13.8px; line-height: 1.45; color: var(--text);">
+                  <strong style="color: var(--accent);">搶救周圍「可挽救半影區」</strong><br/>
+                  把握黃金窗以 <strong>IVT 溶栓／EVT 取栓</strong>搶通血流，把瀕危腦組織救回來。
+                </div>
+              </div>
+            </div>
+
+            <div class="mech-box" style="background: #fef2f2; border: 1.5px solid #fca5a5;">
+              <div style="font-size: 15.5px; font-weight: 800; color: var(--danger);">出血性中風（ICH）— 腦血管「破掉了」</div>
+              <div class="mech-row">
+                <svg viewBox="0 0 210 56" width="210" height="56" style="flex-shrink:0;" role="img" aria-label="腦血管破裂出血禁止溶栓示意圖">
+                  <rect x="2" y="16" width="96" height="24" rx="12" fill="#fee2e2" stroke="#b91c1c" stroke-width="1.5" />
+                  <circle cx="54" cy="28" r="15" fill="#fb7185" opacity="0.9" />
+                  <text x="54" y="32" text-anchor="middle" fill="#ffffff" font-size="11" font-weight="800">出血</text>
+                  <path d="M103 28 L120 28" stroke="#fb7185" stroke-width="2.5" />
+                  <polygon points="120,23 128,28 120,33" fill="#fb7185" />
+                  <rect x="132" y="10" width="76" height="36" rx="8" fill="#fecaca" stroke="#b91c1c" stroke-width="1.5" />
+                  <text x="170" y="33" text-anchor="middle" fill="#7f1d1d" font-size="13" font-weight="800">禁打溶栓</text>
+                </svg>
+                <div style="font-size: 13.8px; line-height: 1.45; color: #7f1d1d;">
+                  <strong>外觀症狀相似，處置卻完全相反！</strong><br/>
+                  未經頭部 <strong>NCCT（目標 ≤25 分鐘）</strong>排除出血前，絕不可先給化血栓藥。
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Uniform 2x2 FAST/CPSS stretched evenly + Taiwan 119 callout -->
+          <div class="card" style="display:flex; flex-direction:column; gap: 12px; padding: 15px 18px;">
+            <div class="card-title" style="color: var(--accent); margin-bottom: 0; font-size: 16.5px;">🚨 第一時間辨識（FAST / CPSS）＋ 立即撥打 119</div>
+
+            <div class="grid-2" style="flex: 1; gap: 11px; align-items: stretch;">
+              <div class="fast-card">
+                <div class="fast-letter" style="background: var(--primary-soft); color: var(--primary);">F</div>
+                <div class="step-content"><strong>Face 臉部歪斜</strong><span class="sub">微笑時嘴角不對稱、單側下垂</span></div>
+              </div>
+              <div class="fast-card">
+                <div class="fast-letter" style="background: var(--primary-soft); color: var(--primary);">A</div>
+                <div class="step-content"><strong>Arm 單側無力</strong><span class="sub">雙手平舉時一側無力掉落</span></div>
+              </div>
+              <div class="fast-card">
+                <div class="fast-letter" style="background: var(--primary-soft); color: var(--primary);">S</div>
+                <div class="step-content"><strong>Speech 說話不清</strong><span class="sub">口齒含糊、答非所問或說不出</span></div>
+              </div>
+              <div class="fast-card" style="border-color: #86efac; background: #f0fdf4;">
+                <div class="fast-letter" style="background: var(--accent-soft); color: var(--accent);">T</div>
+                <div class="step-content"><strong>Time 記下 LKW・打 119</strong><span class="sub">確認最後正常時間並叫救護車（COR I）</span></div>
+              </div>
+            </div>
+
+            <div class="callout callout-accent" style="padding: 10px 14px; font-size: 13.8px;">
+              <strong>🇹🇼 台灣 119 實證：</strong>過去民眾調查僅 <strong>5.7%</strong> 具良好中風識能；由 <strong>119 到院前通報（COR 1/I）</strong>，台北研究顯示可大幅縮短 door-to-CT（<strong>13 vs 19 分鐘</strong>）。
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom 3 equal-height metric cards (slogan updated to avoid duplicate!) -->
+        <div class="grid-3">
+          <div class="card" style="border-top: 4px solid var(--primary); padding: 13px 17px;">
+            <div class="card-title" style="font-size: 15.8px; margin-bottom: 5px;">⏱️ 分秒效益與急診時間指標</div>
+            <p style="font-size: 14px; line-height: 1.46; color: var(--muted);">
+              每提前 <strong>15 分鐘</strong>啟動 IVT，住院死亡與 sICH 均降（<strong>OR 0.96</strong>，GWTG）。急診目標：腦影像 <strong>≤25 分鐘</strong>、到院至打藥 <strong>DTN &lt;60 分鐘</strong>（COR I）。
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--accent); padding: 13px 17px;">
+            <div class="card-title" style="color: var(--accent); font-size: 15.8px; margin-bottom: 5px;">📋 到院標準嚴重度評估</div>
+            <p style="font-size: 14px; line-height: 1.46; color: var(--muted);">
+              跨專業中風團隊以 <strong>NIHSS</strong> 量表量化神經缺損並追蹤變化（<strong>COR 1</strong>）；<strong>兒童</strong>突發持續局灶缺損（含首次癲癇）亦應懷疑 AIS（<strong>COR 1</strong>）。
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--danger); padding: 13px 17px;">
+            <div class="card-title" style="color: var(--danger); font-size: 15.8px; margin-bottom: 5px;">⛔ 院前救護車安全禁令</div>
+            <p style="font-size: 14px; line-height: 1.46; color: #7f1d1d;">
+              未照 CT 排除出血前，<strong>禁用硝化甘油（GTN 貼片，COR 3: Harm）</strong>，亦不建議救護車現場積極降壓至 <strong>SBP 130–140 mm Hg（COR 3: No Benefit）</strong>。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 2.2–2.3, 3.1–3.2；TSGS/TSEM 台灣院前與急診指引 (2020) Ch 2–3, 6</span>
+        <span>Page 4 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 5: CORE CONCEPT & FLOWCHART ==================== -->
+    <section class="slide" data-page="5">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">05 · CORE CONCEPT &amp; ED WORKFLOW</div>
+          <h2 class="slide-h2">為什麼分秒必爭？IVT 核心概念與急診啟動流程</h2>
+        </div>
+        <span class="badge badge-primary">黃金啟動｜COR 1, LOE A</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="analogy-bar">
+          <strong>白話理解：</strong>急性缺血性中風（AIS）就像腦部血管突然「大塞車」；靜脈溶栓（IVT）是從靜脈打入化血栓藥物，在腦細胞壞死前搶通血流。
+        </div>
+
+        <div class="card" style="padding: 14px 18px;">
+          <svg viewBox="0 0 1120 156" width="100%" height="156" role="img" aria-label="急診 IVT 啟動四步驟流程圖">
+            <!-- Step 1 -->
+            <rect x="8" y="18" width="244" height="120" rx="14" fill="#f3ede2" stroke="#1b4332" stroke-width="2" />
+            <text x="130" y="50" text-anchor="middle" fill="#1b4332" font-size="18" font-weight="800">1. 快速到院評估</text>
+            <text x="130" y="82" text-anchor="middle" fill="#1c1917" font-size="15" font-weight="600">確認發病 0–4.5 小時</text>
+            <text x="130" y="108" text-anchor="middle" fill="#57534e" font-size="14">檢驗血糖＋判定失能缺損</text>
+
+            <path d="M258 78 L292 78" stroke="#1b4332" stroke-width="3" />
+            <polygon points="292,71 304,78 292,85" fill="#1b4332" />
+
+            <!-- Step 2 -->
+            <rect x="308" y="18" width="244" height="120" rx="14" fill="#f3ede2" stroke="#1b4332" stroke-width="2" />
+            <text x="430" y="50" text-anchor="middle" fill="#1b4332" font-size="18" font-weight="800">2. 急做頭部 NCCT</text>
+            <text x="430" y="82" text-anchor="middle" fill="#15803d" font-size="16" font-weight="700">到院目標 ≤25 分鐘</text>
+            <text x="430" y="108" text-anchor="middle" fill="#57534e" font-size="14">排除出血與大範圍明確低密度</text>
+
+            <path d="M558 78 L592 78" stroke="#15803d" stroke-width="3" />
+            <polygon points="592,71 604,78 592,85" fill="#15803d" />
+
+            <!-- Step 3 -->
+            <rect x="608" y="18" width="244" height="120" rx="14" fill="#ecfdf5" stroke="#15803d" stroke-width="2.5" />
+            <text x="730" y="50" text-anchor="middle" fill="#15803d" font-size="18" font-weight="800">3. 立即給予 IVT</text>
+            <text x="730" y="82" text-anchor="middle" fill="#1c1917" font-size="15" font-weight="700">COR 1, LOE A</text>
+            <text x="730" y="108" text-anchor="middle" fill="#57534e" font-size="14">不等進階影像／非必要凝血</text>
+
+            <path d="M858 78 L892 78" stroke="#c2410c" stroke-width="3" />
+            <polygon points="892,71 904,78 892,85" fill="#c2410c" />
+
+            <!-- Step 4 -->
+            <rect x="908" y="18" width="204" height="120" rx="14" fill="#fff7ed" stroke="#c2410c" stroke-width="2" />
+            <text x="1010" y="50" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="800">4. 橋接 EVT</text>
+            <text x="1010" y="82" text-anchor="middle" fill="#1c1917" font-size="15" font-weight="600">合併 LVO 同時取栓</text>
+            <text x="1010" y="108" text-anchor="middle" fill="#57534e" font-size="14">不跳過、不等待反應</text>
+          </svg>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <div class="card-title" style="color: var(--accent);">⚡ 速度優先原則（COR 1, LOE B-NR）</div>
+            <ul class="clean-list list-accent">
+              <li>只要具<strong>失能性神經缺損</strong>（不論 NIHSS 分數），0–4.5 小時內排除出血與低血糖即可施打。</li>
+              <li><strong>不可</strong>因等待進階多模影像（CTA/MRA/CTP/MRP）或非必要凝血抽血延誤給藥。</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="card-title" style="color: var(--warning);">🔗 大血管阻塞（LVO）橋接原則（COR 1, LOE A）</div>
+            <ul class="clean-list list-warning">
+              <li>若同時符合血管內機械取栓（EVT），<strong>不可跳過 IVT</strong> 直接只做取栓。</li>
+              <li>給予 IVT 後<strong>不可等待觀察臨床反應</strong>，應直接接續安排 EVT。</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 3.2, 4.6.1, 4.7.1</span>
+        <span>Page 5 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 6: TIME WINDOWS TIMELINE ==================== -->
+    <section class="slide" data-page="6">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">06 · THERAPEUTIC TIME WINDOWS</div>
+          <h2 class="slide-h2">時間就是大腦：從 4.5 小時黃金窗到 24 小時延長窗</h2>
+        </div>
+        <span class="badge badge-accent">影像篩選擴大救治時間</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="card" style="padding: 14px 18px;">
+          <svg viewBox="0 0 1120 150" width="100%" height="150" role="img" aria-label="靜脈溶栓時間窗從 0 至 24 小時階梯圖">
+            <line x1="40" y1="86" x2="1080" y2="86" stroke="#e5dfd3" stroke-width="8" stroke-linecap="round" />
+            <line x1="40" y1="86" x2="290" y2="86" stroke="#15803d" stroke-width="8" stroke-linecap="round" />
+            <line x1="305" y1="86" x2="555" y2="86" stroke="#1b4332" stroke-width="8" stroke-linecap="round" />
+            <line x1="570" y1="86" x2="820" y2="86" stroke="#1b4332" stroke-width="8" stroke-linecap="round" />
+            <line x1="835" y1="86" x2="1080" y2="86" stroke="#c2410c" stroke-width="8" stroke-linecap="round" />
+
+            <circle cx="165" cy="86" r="14" fill="#15803d" />
+            <text x="165" y="42" text-anchor="middle" fill="#15803d" font-size="18" font-weight="800">0–4.5 小時</text>
+            <text x="165" y="64" text-anchor="middle" fill="#1c1917" font-size="13.5" font-weight="700">COR 1, LOE A</text>
+            <text x="165" y="124" text-anchor="middle" fill="#57534e" font-size="14">NCCT 排除出血即給藥</text>
+
+            <circle cx="430" cy="86" r="14" fill="#1b4332" />
+            <text x="430" y="42" text-anchor="middle" fill="#1b4332" font-size="18" font-weight="800">醒後發覺 ≤4.5 小時</text>
+            <text x="430" y="64" text-anchor="middle" fill="#1c1917" font-size="13.5" font-weight="700">COR 2a, LOE B-R</text>
+            <text x="430" y="124" text-anchor="middle" fill="#57534e" font-size="14">MRI DWI-FLAIR mismatch</text>
+
+            <circle cx="695" cy="86" r="14" fill="#1b4332" />
+            <text x="695" y="42" text-anchor="middle" fill="#1b4332" font-size="18" font-weight="800">4.5–9 小時／睡眠中點</text>
+            <text x="695" y="64" text-anchor="middle" fill="#1c1917" font-size="13.5" font-weight="700">COR 2a（限不適用 EVT）</text>
+            <text x="695" y="124" text-anchor="middle" fill="#57534e" font-size="14">自動化灌流 mismatch</text>
+
+            <circle cx="958" cy="86" r="14" fill="#c2410c" />
+            <text x="958" y="42" text-anchor="middle" fill="#c2410c" font-size="18" font-weight="800">4.5–24 小時 LVO</text>
+            <text x="958" y="64" text-anchor="middle" fill="#1c1917" font-size="13.5" font-weight="700">COR 2b（無法 EVT）</text>
+            <text x="958" y="124" text-anchor="middle" fill="#57534e" font-size="14">灌流可挽救半影區</text>
+          </svg>
+        </div>
+
+        <div class="grid-4">
+          <div class="card" style="border-top: 4px solid var(--accent);">
+            <div class="card-title" style="color: var(--accent); font-size: 16px;">標準黃金窗</div>
+            <p style="font-size: 14.5px; line-height: 1.5; color: var(--muted);">
+              發病明確 <strong>0–4.5 小時</strong>內成人失能 AIS，不須進階灌流即可立即溶栓（<strong>COR 1</strong>）。
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <div class="card-title" style="font-size: 16px;">WAKE-UP 試驗</div>
+            <p style="font-size: 14.5px; line-height: 1.5; color: var(--muted);">
+              醒後發覺 ≤4.5h，MRI 呈現 DWI-FLAIR mismatch；90 天良好預後（mRS 0–1）<strong>53.3% vs 41.8%</strong>。
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--primary);">
+            <div class="card-title" style="font-size: 16px;">EXTEND 試驗</div>
+            <p style="font-size: 14.5px; line-height: 1.5; color: var(--muted);">
+              <strong>不適用 EVT</strong> 之 4.5–9h 灌流篩選；90 天良好預後 <strong>35.4% vs 29.5%</strong>，惟須留意 sICH <strong>6.2%</strong>。
+            </p>
+          </div>
+          <div class="card" style="border-top: 4px solid var(--warning);">
+            <div class="card-title" style="color: var(--warning); font-size: 16px;">TRACE-III / TIMELESS</div>
+            <p style="font-size: 14.5px; line-height: 1.5; color: var(--muted);">
+              無法 EVT 之 LVO 4.5–24h：<strong>33.0% vs 24.2%</strong>（COR 2b）；但若能快速 EVT，TIMELESS 顯示無額外獲益。
+            </p>
+          </div>
+        </div>
+
+        <div class="callout callout-warning">
+          <strong>白話重點：</strong>超過 4.5 小時並非不能救，而是必須靠「進階影像」確認大腦裡還有救得回來的組織（半影區），才能謹慎評估延長窗溶栓。
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 3.2, 4.6.1–4.6.3 (WAKE-UP / EXTEND / TRACE-III / TIMELESS)</span>
+        <span>Page 6 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 7: DISABLING VS NON-DISABLING (BATHE) ==================== -->
+    <section class="slide" data-page="7">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">07 · PATIENT SELECTION</div>
+          <h2 class="slide-h2">不是中風就一定要打！如何判斷「明確失能」？</h2>
+        </div>
+        <span class="badge badge-warning">輕型非失能｜AHA COR 3: No Benefit</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="card" style="padding: 13px 18px;">
+          <div style="font-size: 15px; color: var(--muted); margin-bottom: 10px;">
+            <strong style="color: var(--primary);">BATHE 生活功能檢核</strong>（針對輕型中風 NIHSS 0–5：若症狀持續，是否影響基本日常生活或工作？）
+          </div>
+          <div class="bathe-row">
+            <div class="bathe-pill"><div class="bathe-letter">B</div><div class="bathe-label">沐浴／穿衣</div></div>
+            <div class="bathe-pill"><div class="bathe-letter">A</div><div class="bathe-label">獨立行走</div></div>
+            <div class="bathe-pill"><div class="bathe-letter">T</div><div class="bathe-label">如廁能力</div></div>
+            <div class="bathe-pill"><div class="bathe-letter">H</div><div class="bathe-label">個人衛生</div></div>
+            <div class="bathe-pill"><div class="bathe-letter">E</div><div class="bathe-label">進食與吞嚥</div></div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <div class="card" style="border-top: 5px solid var(--accent);">
+            <div class="card-title" style="color: var(--accent);">✅ 通常屬「明確失能」→ 考慮 IVT</div>
+            <ul class="clean-list list-accent">
+              <li><strong>完全偏盲</strong>（嚴重影響日常視物與安全）</li>
+              <li><strong>重度失語</strong>（無法有效表達或理解溝通）</li>
+              <li><strong>重度半側忽略</strong></li>
+              <li><strong>肢體無力無法對抗重力</strong>，或無法獨立步行與安全吞嚥</li>
+            </ul>
+          </div>
+
+          <div class="card" style="border-top: 5px solid var(--warning);">
+            <div class="card-title" style="color: var(--warning);">⛔ 通常「非明確失能」→ 偏好 DAPT</div>
+            <ul class="clean-list list-warning">
+              <li><strong>孤立性面癱</strong>（僅單側嘴角歪斜）</li>
+              <li><strong>孤立性半側感覺異常</strong>（單純麻木感）</li>
+              <li><strong>不影響步態之輕度共濟失調</strong></li>
+              <li><strong>仍可有效溝通之輕度孤立失語</strong></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout callout-accent">
+          <strong>實證依據（PRISMS / ARAMIS）：</strong>0–4.5 小時輕型非失能缺損接受 IVT 並未優於 Aspirin 或雙重抗血小板（DAPT），且 DAPT 出血風險較低，故 AHA 2026 列為 <strong>COR 3: No Benefit, LOE B-R</strong>。
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 4.6.1, Table 4 (PRISMS / ARAMIS)</span>
+        <span>Page 7 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 8: TNK VS ALTEPLASE ==================== -->
+    <section class="slide" data-page="8">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">08 · FIRST-LINE THROMBOLYTICS</div>
+          <h2 class="slide-h2">兩大主角對決：Tenecteplase (TNK) vs Alteplase (tPA)</h2>
+        </div>
+        <span class="badge badge-primary">0–4.5h 並列首選｜COR 1, LOE A</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="grid-2-wide" style="align-items: stretch;">
+          <div class="card" style="display:flex; flex-direction:column; justify-content:space-between; gap:12px;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th style="width:24%">比較項目</th>
+                  <th style="width:38%">Tenecteplase (TNK)</th>
+                  <th style="width:38%">Alteplase (tPA)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>標準劑量</strong></td>
+                  <td><span class="hl-accent">0.25 mg/kg</span>（max 25 mg）</td>
+                  <td><span class="hl-primary">0.9 mg/kg</span>（max 90 mg）</td>
+                </tr>
+                <tr>
+                  <td><strong>給藥方式</strong></td>
+                  <td><span class="hl-accent">5–10 秒</span>單次靜脈推注</td>
+                  <td>10% 1 分鐘推注＋90% 輸注 <strong>60 分鐘</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>半衰期</strong></td>
+                  <td>17–24 分鐘（較不消耗 Fibrinogen）</td>
+                  <td>4–6 分鐘</td>
+                </tr>
+                <tr>
+                  <td><strong>臨床角色</strong></td>
+                  <td>AcT 等五大 RCT（N &gt;6,000）證實非劣性，大幅簡化急診與轉院</td>
+                  <td>延長窗實證齊全；首納兒童 28 天–18 歲可考慮（COR 2b）</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="callout callout-danger">
+              <strong>絕對劑量紅線：</strong>嚴禁使用高劑量 <strong>TNK 0.4 mg/kg</strong>（COR 3: No Benefit, LOE A；NOR-TEST 2 因較差安全性與預後提前終止）。
+            </div>
+          </div>
+
+          <div class="card" style="display:flex; flex-direction:column; justify-content:space-between;">
+            <div>
+              <div class="card-title">⏱️ 給藥流程直覺對照（白話圖解）</div>
+              <svg viewBox="0 0 440 250" width="100%" height="250" role="img" aria-label="TNK 5 至 10 秒單次推注與 Alteplase 60 分鐘輸注比較圖">
+                <text x="10" y="28" fill="#c2410c" font-size="16" font-weight="700">Tenecteplase (TNK) — 一次到位</text>
+                <rect x="10" y="42" width="420" height="44" rx="10" fill="#f3ede2" />
+                <rect x="10" y="42" width="70" height="44" rx="10" fill="#c2410c" />
+                <text x="45" y="69" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="800">5–10s</text>
+                <text x="94" y="69" fill="#1c1917" font-size="14" font-weight="600">單次推注完成 → 立刻銜接轉診或取栓</text>
+
+                <text x="10" y="130" fill="#1b4332" font-size="16" font-weight="700">Alteplase (tPA) — 分兩段輸注</text>
+                <rect x="10" y="144" width="420" height="44" rx="10" fill="#f3ede2" />
+                <rect x="10" y="144" width="56" height="44" rx="10" fill="#1b4332" />
+                <rect x="70" y="144" width="360" height="44" rx="10" fill="#2d6a4f" />
+                <text x="38" y="171" text-anchor="middle" fill="#ffffff" font-size="13" font-weight="800">1分</text>
+                <text x="250" y="171" text-anchor="middle" fill="#ffffff" font-size="14.5" font-weight="700">剩餘 90% 持續靜脈點滴 60 分鐘</text>
+
+                <line x1="10" y1="216" x2="430" y2="216" stroke="#a8a29e" stroke-width="2" />
+                <text x="10" y="238" fill="#57534e" font-size="13">0 分鐘</text>
+                <text x="220" y="238" text-anchor="middle" fill="#57534e" font-size="13">30 分鐘</text>
+                <text x="430" y="238" text-anchor="end" fill="#57534e" font-size="13">60 分鐘</text>
+              </svg>
+            </div>
+            <div class="callout callout-warning" style="font-size: 13.8px;">
+              <strong>實務提醒：</strong>兒童 Alteplase 最佳劑量尚未正式確立；台灣現行法規核可藥仍以 Alteplase 為主（詳見第 12 頁）。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 4.6.1–4.6.2, Table 7；TSGS IVT (2025) Ch 10</span>
+        <span>Page 8 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 9: TRAFFIC LIGHT CONTRAINDICATIONS ==================== -->
+    <section class="slide" data-page="9">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">09 · SAFETY SCREENING &amp; MYTH BUSTING</div>
+          <h2 class="slide-h2">打藥前的紅綠燈檢核：絕對禁忌 vs 相對禁忌 vs 迷思破解</h2>
+        </div>
+        <span class="badge badge-danger">AHA/ASA 2026 Table 8 風險梯度</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 14px;">
+        <div class="grid-3" style="flex: 1; align-items: stretch;">
+          <div class="tl-card tl-red" style="justify-content: space-between;">
+            <div>
+              <div class="tl-head" style="color: var(--danger); margin-bottom: 10px;">🔴 紅燈：絕對禁忌（絕不可打）</div>
+              <ul class="clean-list list-danger" style="font-size: 15px; gap: 8px;">
+                <li>CT 見<strong>急性腦出血</strong>或大範圍明確低密度</li>
+                <li><strong>&lt;14 天</strong>中重度頭傷（TBI）或腦脊神外手術</li>
+                <li><strong>3 個月內</strong>急性脊髓損傷</li>
+                <li>嚴重凝血異常：PLT &lt;100,000、INR &gt;1.7、aPTT &gt;40 s、PT &gt;15 s</li>
+                <li>軸內腦瘤、感染性心內膜炎、主動脈剝離</li>
+                <li><strong>2026 新增：ARIA</strong> 或抗類澱粉蛋白免疫療法</li>
+              </ul>
+            </div>
+            <div class="callout callout-danger" style="font-size: 13.5px; padding: 9px 12px;">
+              <strong>紅線原則：</strong>上述任一條件成立即絕不可施打 IVT，應改評估其他處置。
+            </div>
+          </div>
+
+          <div class="tl-card tl-yellow" style="justify-content: space-between;">
+            <div>
+              <div class="tl-head" style="color: var(--warning); margin-bottom: 10px;">🟡 黃燈：相對禁忌（須權衡）</div>
+              <ul class="clean-list list-warning" style="font-size: 15px; gap: 10px;">
+                <li><strong>近期 DOAC（&lt;48 小時）</strong>：AHA 2026 列相對禁忌，綜合評估末次服藥時間、腎功能與取栓可近性</li>
+                <li><strong>10 天內</strong>重大非中樞神經系統手術</li>
+                <li><strong>21 天內</strong>腸胃道或泌尿道出血</li>
+                <li><strong>3 個月內</strong>缺血性中風或心肌梗塞（STEMI）</li>
+              </ul>
+            </div>
+            <div class="callout callout-warning" style="font-size: 13.5px; padding: 9px 12px;">
+              <strong>實務重點：</strong>黃燈非一律禁止，應由神經專科醫師權衡失能嚴重度與出血風險並詳實紀錄。
+            </div>
+          </div>
+
+          <div class="tl-card tl-green" style="justify-content: space-between;">
+            <div>
+              <div class="tl-head" style="color: var(--accent); margin-bottom: 10px;">🟢 綠燈：初學者必破迷思</div>
+              <ul class="clean-list list-accent" style="font-size: 15px; gap: 10px;">
+                <li><strong>平常吃抗血小板藥（SAPT/DAPT）</strong>：仍強烈推薦 IVT（<strong>COR 1, LOE B-NR</strong>），獲益遠大於出血風險</li>
+                <li><strong>未知腦微出血（CMB）</strong>：<strong>絕不可</strong>先做 MRI 找微出血而延誤打藥（<strong>COR 1</strong>）</li>
+                <li><strong>已知 CMB 分層</strong>：1–10 顆仍合理（<strong>COR 2a</strong>）；&gt;10 顆效益不確定（<strong>COR 2b</strong>）</li>
+              </ul>
+            </div>
+            <div class="callout callout-accent" style="font-size: 13.5px; padding: 9px 12px;">
+              <strong>白話口訣：</strong>沒做過 MRI 不必等，有吃阿斯匹靈仍該搶救！
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 13px 20px; display: grid; grid-template-columns: 1.45fr 1fr; gap: 22px; align-items: center;">
+          <div>
+            <div style="font-size: 14.5px; font-weight: 700; color: var(--primary); margin-bottom: 6px;">📊 為什麼吃抗血小板藥仍強烈推薦 IVT？（獲益 vs 風險直覺對照）</div>
+            <svg viewBox="0 0 640 72" width="100%" height="72" role="img" aria-label="抗血小板藥族群接受 IVT 之獲益約 8% 與 sICH 風險增幅 +0.9% 至 +1.2% 對照圖">
+              <text x="0" y="21" fill="#15803d" font-size="14" font-weight="700">預期絕對獲益</text>
+              <rect x="112" y="7" width="440" height="20" rx="6" fill="#16a34a" />
+              <text x="562" y="22" fill="#15803d" font-size="15" font-weight="800">約 8%</text>
+
+              <text x="0" y="56" fill="#b91c1c" font-size="14" font-weight="700">sICH 風險增幅</text>
+              <rect x="112" y="42" width="68" height="20" rx="6" fill="#dc2626" />
+              <text x="190" y="57" fill="#991b1b" font-size="14.5" font-weight="700">+0.9%（單抗 SAPT）／ +1.2%（雙抗 DAPT）</text>
+            </svg>
+          </div>
+          <div style="border-left: 1px solid var(--border); padding-left: 20px; font-size: 14.2px; line-height: 1.5; color: var(--muted);">
+            <strong style="color: var(--warning);">🔍 腦微出血（CMB）三句記法：</strong><br/>
+            未知負荷 → <span class="hl-accent">直接打、不等 MRI（COR 1）</span><br/>
+            已知 1–10 顆 → <span class="hl-primary">仍合理（COR 2a）</span>；&gt;10 顆 → <span class="hl-warning">個體評估（COR 2b）</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 4.6.1, Table 8</span>
+        <span>Page 9 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 10: 24H BP & MONITORING ==================== -->
+    <section class="slide" data-page="10">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">10 · 24-HOUR SAFETY NET</div>
+          <h2 class="slide-h2">給藥前後 24 小時守護網：血壓紅線、監測節奏與用藥禁令</h2>
+        </div>
+        <span class="badge badge-primary">血壓控管＋密集神經監測</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 14px;">
+        <div class="grid-2" style="flex: 1; align-items: stretch; gap: 20px;">
+          <!-- Left: 3 native flex:1 BP zone cards (fills 100% height evenly, zero dead void) -->
+          <div class="card" style="display:flex; flex-direction:column; gap: 11px; padding: 15px 18px;">
+            <div class="card-title" style="margin-bottom: 0;">🩸 血壓三道關卡（太高易出血，壓太低害缺血）</div>
+
+            <div style="display:flex; flex-direction:column; gap: 10px; flex: 1;">
+              <div style="flex: 1; background: #ecfdf5; border: 1.5px solid #86efac; border-radius: 11px; padding: 12px 16px; display:flex; align-items:center; justify-content:space-between; gap: 14px;">
+                <div>
+                  <div style="font-size: 16px; font-weight: 800; color: #15803d;">1. 給藥前門檻（COR 1）</div>
+                  <div style="font-size: 13.8px; color: var(--muted); margin-top: 3px;">須先平穩降壓達標，才能開始推注溶栓藥</div>
+                </div>
+                <div style="background: #15803d; color: #ffffff; font-size: 21px; font-weight: 800; padding: 8px 14px; border-radius: 9px; white-space:nowrap;">&lt;185/110</div>
+              </div>
+
+              <div style="flex: 1; background: #f0fdf4; border: 1.5px solid #6ee7b7; border-radius: 11px; padding: 12px 16px; display:flex; align-items:center; justify-content:space-between; gap: 14px;">
+                <div>
+                  <div style="font-size: 16px; font-weight: 800; color: #1b4332;">2. 給藥後 24 小時維持（COR 1）</div>
+                  <div style="font-size: 13.8px; color: var(--muted); margin-top: 3px;">支援內文建議維持收縮壓 SBP 140–180 mm Hg</div>
+                </div>
+                <div style="background: #1b4332; color: #ffffff; font-size: 21px; font-weight: 800; padding: 8px 14px; border-radius: 9px; white-space:nowrap;">&lt;180/105</div>
+              </div>
+
+              <div style="flex: 1; background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 11px; padding: 12px 16px; display:flex; align-items:center; justify-content:space-between; gap: 14px;">
+                <div>
+                  <div style="font-size: 16px; font-weight: 800; color: var(--danger);">3. 禁止積極過度降壓（COR 3: No Benefit）</div>
+                  <div style="font-size: 13.8px; color: #7f1d1d; margin-top: 3px;">過度壓低血壓反可能導致缺血腦區灌流不足</div>
+                </div>
+                <div style="background: var(--danger); color: #ffffff; font-size: 19px; font-weight: 800; padding: 8px 14px; border-radius: 9px; white-space:nowrap;">禁 SBP &lt;140</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 2x2 CSS Grid (1fr 1fr rows & cols -> zero floating vertical gaps!) -->
+          <div class="card" style="display:flex; flex-direction:column; gap: 11px; padding: 15px 18px;">
+            <div class="card-title" style="color: var(--accent); margin-bottom: 0;">🕒 ICU／中風病房 24 小時監測節奏</div>
+
+            <div style="display:grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 11px; flex: 1;">
+              <div style="background: #fef2f2; border: 1.5px solid #fca5a5; border-radius: 11px; padding: 14px 16px; display:flex; flex-direction:column; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="step-tag step-tag-danger" style="font-size: 13px;">階段 1｜前 2 小時</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--danger);">最高風險期</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: var(--danger);">每 15 分鐘 1 次</div>
+                <div style="font-size: 13.2px; color: var(--muted); line-height: 1.4;">最密集量測血壓與神經學變化，及早抓出出血警訊</div>
+              </div>
+
+              <div style="background: #fffbeb; border: 1.5px solid #fcd34d; border-radius: 11px; padding: 14px 16px; display:flex; flex-direction:column; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="step-tag step-tag-warning" style="font-size: 13px;">階段 2｜接續 6 小時</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--warning);">中度警戒期</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: var(--warning);">每 30 分鐘 1 次</div>
+                <div style="font-size: 13.2px; color: var(--muted); line-height: 1.4;">持續監控血壓波動與神經缺損，防範延遲出血</div>
+              </div>
+
+              <div style="background: var(--surface-alt); border: 1.5px solid var(--border); border-radius: 11px; padding: 14px 16px; display:flex; flex-direction:column; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="step-tag step-tag-primary" style="font-size: 13px;">階段 3｜之後至 24 小時</span>
+                  <span style="font-size: 12px; font-weight: 700; color: var(--primary);">穩定觀察期</span>
+                </div>
+                <div style="font-size: 20px; font-weight: 800; color: var(--primary);">每小時 1 次</div>
+                <div style="font-size: 13.2px; color: var(--muted); line-height: 1.4;">維持收縮壓穩定於 140–180 mm Hg 安全區間</div>
+              </div>
+
+              <div style="background: #ecfdf5; border: 1.5px solid #86efac; border-radius: 11px; padding: 14px 16px; display:flex; flex-direction:column; justify-content:space-between;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="step-tag step-tag-accent" style="font-size: 13px;">階段 4｜滿 24 小時</span>
+                  <span style="font-size: 12px; font-weight: 700; color: #15803d;">銜接次級預防</span>
+                </div>
+                <div style="font-size: 19px; font-weight: 800; color: #15803d;">追蹤腦部 CT / MRI</div>
+                <div style="font-size: 13.2px; color: var(--muted); line-height: 1.4;">確認排除顱內出血後，方可啟用抗血小板或抗凝藥</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2" style="gap: 20px;">
+          <div class="callout callout-accent" style="padding: 12px 18px; font-size: 14.5px;">
+            <strong>⏳ 24 小時抗血栓間隔原則：</strong>須待滿 <strong>24 小時</strong>追蹤腦部 CT/MRI 排除出血後，再啟動抗血小板或抗凝治療（減少出血轉化風險）。
+          </div>
+          <div class="callout callout-danger" style="padding: 12px 18px; font-size: 14.5px;">
+            <strong>⛔ 嚴禁早期併用藥物：</strong>禁止 IVT 同時或 <strong>90 分鐘內</strong>給 IV Aspirin（<strong>COR 3: Harm, ARTIS</strong>）；亦不建議併用 IV Eptifibatide 或 Argatroban（COR 3: No Benefit）。
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Sec 4.3, 4.8–4.9, Table 7 (ARTIS)</span>
+        <span>Page 10 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 11: COMPLICATIONS ==================== -->
+    <section class="slide" data-page="11">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">11 · EMERGENCY COMPLICATIONS</div>
+          <h2 class="slide-h2">遇到緊急併發症怎麼辦？腦出血與口舌血管性水腫急救步驟</h2>
+        </div>
+        <span class="badge badge-danger">第一時間停藥＋緊急處置</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 12px;">
+        <div class="callout callout-danger" style="padding: 10px 18px; font-size: 15px; display: flex; justify-content: space-between; align-items: center;">
+          <span><strong>🚨 共用黃金第一反應：</strong>輸注中或 24 小時內一旦出現下列警訊症狀 → <strong>立即停止溶栓輸注</strong>並呼叫急救團隊！</span>
+          <span class="badge badge-danger" style="font-size: 12px;">STOP INFUSION FIRST</span>
+        </div>
+
+        <div class="grid-2" style="flex: 1; align-items: stretch; gap: 20px;">
+          <!-- Left: sICH with flex:1 step boxes -->
+          <div class="card" style="border-top: 5px solid var(--danger); display:flex; flex-direction:column; gap: 9px; padding: 14px 18px;">
+            <div class="card-title" style="color: var(--danger); font-size: 18px; margin-bottom: 0;">🧠 併發症 1｜24 小時內症狀性腦出血（sICH）</div>
+            <div style="background: var(--danger-soft); border: 1px solid #fca5a5; border-radius: 8px; padding: 7px 12px; font-size: 13.8px; color: #7f1d1d;">
+              <strong>警訊症狀：</strong>突發劇烈頭痛、急性高血壓、噁心嘔吐、意識或神經學惡化
+            </div>
+            <div style="display:flex; flex-direction:column; gap: 8px; flex: 1;">
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-danger">STEP 1</span>
+                  <div class="step-content"><strong>立即停藥與急檢</strong><span class="sub">急查 CBC / PT(INR) / aPTT / Fibrinogen 與備血</span></div>
+                </div>
+                <span class="dose-chip">急做 NCCT</span>
+              </div>
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-danger">STEP 2</span>
+                  <div class="step-content"><strong>靜脈抗纖溶藥物</strong><span class="sub">靜脈輸注 10 分鐘以抑制血栓持續溶解</span></div>
+                </div>
+                <span class="dose-chip">Tranexamic acid 1000 mg IV</span>
+              </div>
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-danger">STEP 3</span>
+                  <div class="step-content"><strong>補充纖維蛋白原與會診</strong><span class="sub">同步會診神經外科與血液科評估支持治療</span></div>
+                </div>
+                <span class="dose-chip">Cryoprecipitate 10–12 U</span>
+              </div>
+            </div>
+            <div class="callout callout-warning" style="padding: 8px 12px; font-size: 13.5px;">
+              <strong>⚠️ 美台目標分歧：</strong>AHA 2026 Fibrinogen 目標 <strong>≥150 mg/dL</strong>；台灣 2025 目標 <strong>≥200 mg/dL</strong>。
+            </div>
+          </div>
+
+          <!-- Right: Angioedema with flex:1 step boxes -->
+          <div class="card" style="border-top: 5px solid var(--warning); display:flex; flex-direction:column; gap: 9px; padding: 14px 18px;">
+            <div class="card-title" style="color: var(--warning); font-size: 18px; margin-bottom: 0;">🗣️ 併發症 2｜口舌血管性水腫（Angioedema）</div>
+            <div style="background: var(--warning-soft); border: 1px solid #fcd34d; border-radius: 8px; padding: 7px 12px; font-size: 13.8px; color: #78350f;">
+              <strong>警訊症狀：</strong>嘴唇、舌頭或口咽腫脹（高風險快速阻塞呼吸道）
+            </div>
+            <div style="display:flex; flex-direction:column; gap: 8px; flex: 1;">
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-warning">STEP 1</span>
+                  <div class="step-content"><strong>優先保護氣道＋停藥</strong><span class="sub">評估是否需清醒纖支鏡插管，立即停溶栓與 ACEi</span></div>
+                </div>
+                <span class="dose-chip">停藥＋停 ACEi</span>
+              </div>
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-warning">STEP 2</span>
+                  <div class="step-content"><strong>三合一靜脈抗水腫藥物</strong><span class="sub">Methylprednisolone 125 mg ＋ Diphenhydramine 50 mg</span></div>
+                </div>
+                <span class="dose-chip">＋ Famotidine 20 mg</span>
+              </div>
+              <div class="step-box" style="flex: 1; align-items: center; justify-content: space-between;">
+                <div style="display:flex; align-items:center; gap: 11px;">
+                  <span class="step-tag step-tag-warning">STEP 3</span>
+                  <div class="step-content"><strong>腫脹持續進展急救</strong><span class="sub">必要時評估進階氣道保護與二線藥物</span></div>
+                </div>
+                <span class="dose-chip">0.1% Epinephrine 0.3 mL</span>
+              </div>
+            </div>
+            <div class="callout callout-warning" style="padding: 8px 12px; font-size: 13.5px;">
+              <strong>⚠️ 美台途徑分歧：</strong>AHA 2026 勘誤改為<strong>肌肉注射 IM</strong>；台灣 2025 原文仍寫皮下注射 <strong>SC</strong>。
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) Tables 5–6 (+ 2026/08 Errata #10)；TSGS IVT (2025) Ch 9</span>
+        <span>Page 11 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 12: US VS TAIWAN DIFFERENCES ==================== -->
+    <section class="slide" data-page="12">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">12 · GUIDELINE DIVERGENCE (US VS TAIWAN)</div>
+          <h2 class="slide-h2">國際指引 vs 台灣實務：臨床必知的 6 大美台差異與法規</h2>
+        </div>
+        <span class="badge badge-warning">指引分歧顯性對照</span>
+      </div>
+
+      <div class="slide-body" style="justify-content: space-between; gap: 14px;">
+        <div class="card" style="padding: 12px 16px; flex: 1; display:flex; flex-direction:column; justify-content:center;">
+          <table class="data-table compact-table">
+            <thead>
+              <tr>
+                <th style="width:19%">臨床分歧面向</th>
+                <th style="width:38%">AHA/ASA AIS（2026）</th>
+                <th style="width:43%">台灣腦中風學會 TSGS（2025）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. 藥品與健保</strong></td>
+                <td>TNK 與 Alteplase 並列首選（COR 1）</td>
+                <td>核可藥為 <span class="hl-primary">Alteplase</span>（2024 健保開放至 4.5h；&gt;4.5h 不給付）；TNK 尚非台灣核可藥</td>
+              </tr>
+              <tr>
+                <td><strong>2. 低劑量 0.6 mg/kg</strong></td>
+                <td>未推薦（僅列 0.9 mg/kg）</td>
+                <td>保留特殊考量（<span class="hl-warning">COR IIb</span>，sICH 1% vs 2%）；橋接 EVT 時 TREAT-AIS 顯示 0.9 mg/kg 較佳</td>
+              </tr>
+              <tr>
+                <td><strong>3. 輕型非失能</strong></td>
+                <td>明確<span class="hl-danger">不建議 IVT（COR 3: No Benefit）</span></td>
+                <td>最佳內科優先，保留醫師評估後個體化決定（<span class="hl-warning">COR IIa</span>）</td>
+              </tr>
+              <tr>
+                <td><strong>4. 近期 DOAC</strong></td>
+                <td>&lt;48h 統一列相對禁忌，綜合評估</td>
+                <td><span class="hl-danger">&lt;24h Xa 不建議（COR III）</span>；24–48h COR IIb；Dabigatran 先用 Idarucizumab 反轉（COR IIa）</td>
+              </tr>
+              <tr>
+                <td><strong>5. 手術／TBI 門檻</strong></td>
+                <td>神外手術／中重度 TBI <strong>&lt;14 天</strong>絕對禁忌</td>
+                <td>總表三較保守：神外手術／嚴重 TBI <strong>&lt;3 個月</strong>列不建議</td>
+              </tr>
+              <tr>
+                <td><strong>6. 動脈瘤與年齡</strong></td>
+                <td>未破裂動脈瘤低疑慮；首納兒童 28 天–18 歲（COR 2b）</td>
+                <td><strong>&gt;1 cm</strong> 未破裂動脈瘤不建議；總表三必備條件列 <strong>≥18 歲</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="grid-2">
+          <div class="callout callout-warning" style="padding: 12px 16px; font-size: 14.2px;">
+            <strong>🏥 台灣健保與仿單提醒：</strong>超過 <strong>4.5 小時</strong>屬仿單外自費使用，臨床施行前須與家屬充分共享決策（SDM）；現行台灣核可藥仍以 Alteplase 為主。
+          </div>
+          <div class="callout callout-accent" style="padding: 12px 16px; font-size: 14.2px;">
+            <strong>⚖️ 台灣《醫療法》§60 急救規範：</strong>危急無家屬可先行急救、<strong>24 小時內</strong>詳載病歷並建議 <strong>2 位醫師</strong>共同認定；不符適應症時病家無權強制要求施打。
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>出處：AHA/ASA AIS (2026) vs TSGS IVT (2025) Ch 4, 7, 10, 12（總表三）</span>
+        <span>Page 12 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 13: SUMMARY ==================== -->
+    <section class="slide" data-page="13">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">13 · KEY TAKEAWAYS</div>
+          <h2 class="slide-h2">重點回顧：初學者必記 5 大實戰口訣</h2>
+        </div>
+        <span class="badge badge-accent">5 句串起全流程</span>
+      </div>
+
+      <div class="slide-body">
+        <div class="summary-list">
+          <div class="summary-item">
+            <div class="summary-num">1</div>
+            <div class="summary-text"><strong>快準啟動：</strong>0–4.5 小時失能 AIS，NCCT（≤25 分鐘）排除出血＋測血糖即打藥，不因等待進階影像延誤（COR 1）。</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-num">2</div>
+            <div class="summary-text"><strong>精準選對人：</strong>用 <strong>BATHE</strong> 判定明確失能；輕型非失能偏好 DAPT（AHA COR 3），合併 LVO 絕不跳過 IVT（COR 1）。</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-num">3</div>
+            <div class="summary-text"><strong>記清兩藥劑量：</strong>TNK <strong>0.25 mg/kg</strong>（max 25 mg，嚴禁 0.4 mg/kg）單推 5–10 秒；Alteplase <strong>0.9 mg/kg</strong>（max 90 mg）輸注 60 分鐘。</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-num">4</div>
+            <div class="summary-text"><strong>嚴守 24 小時線：</strong>給藥前血壓 &lt;185/110、給藥後維持 &lt;180/105（禁壓 &lt;140），滿 24 小時 CT 排除出血再啟用抗血栓。</div>
+          </div>
+          <div class="summary-item">
+            <div class="summary-num">5</div>
+            <div class="summary-text"><strong>在地落地看台灣：</strong>牢記健保 4.5 小時與 Alteplase 核可現況、DOAC 與 3 個月手術門檻差異，以及《醫療法》§60 緊急急救規範。</div>
+          </div>
+        </div>
+
+        <div class="callout callout-danger" style="font-size: 13.8px;">
+          <strong>臨床免責聲明：</strong>本簡報僅供醫療專業人員與學習者之醫學文獻整理與教學參考，不得替代床邊臨床判斷、病患個體化評估或所屬醫院標準作業規範（SOP）。
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>整合依據：AHA/ASA AIS (2026) &amp; 台灣腦中風學會 IVT 指引更新 (2025)</span>
+        <span>Page 13 / 14</span>
+      </div>
+    </section>
+
+    <!-- ==================== PAGE 14: REFERENCES ==================== -->
+    <section class="slide" data-page="14">
+      <div class="slide-header">
+        <div>
+          <div class="kicker">14 · REFERENCES</div>
+          <h2 class="slide-h2">參考文獻與核心試驗索引（References）</h2>
+        </div>
+        <span class="badge badge-primary">實證出處清單</span>
+      </div>
+
+      <div class="slide-body" style="gap: 11px;">
+        <div class="ref-item" style="padding: 9px 15px; font-size: 13.8px; line-height: 1.42;">
+          <strong>1. AHA/ASA 2026 急性缺血性中風早期處置臨床指引</strong> — Prabhakaran S, Gonzalez NR, Zachrison KS, et al. <em>2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke</em>. <strong>Stroke</strong>. 2026;57:e316–e436.<br/>
+          <span class="ref-doi">DOI: 10.1161/STR.0000000000000513</span>
+        </div>
+
+        <div class="ref-item" style="padding: 9px 15px; font-size: 13.8px; line-height: 1.42;">
+          <strong>2. AHA/ASA 2026 指引勘誤（2026 年 8 月）</strong> — Correction to: 2026 Guideline for the Early Management of Patients With Acute Ischemic Stroke. <strong>Stroke</strong>. 2026;57:e461–e467.<br/>
+          <span class="ref-doi">DOI: 10.1161/STR.0000000000000530</span>
+        </div>
+
+        <div class="ref-item" style="border-left-color: var(--accent); padding: 9px 15px; font-size: 13.8px; line-height: 1.42;">
+          <strong>3. 台灣腦中風學會 2025 靜脈血栓溶解治療指引更新</strong> — 王淳民、謝孟倉、陳志昊、湯頌君、鄭建興、宋碧姍等。《2025 台灣腦中風學會急性缺血性腦中風靜脈血栓溶解治療指引更新》。<br/>
+          <span class="ref-doi">DOI: 10.6318/FJS.202503_7(1).0001</span>
+        </div>
+
+        <div class="ref-item" style="border-left-color: var(--accent); padding: 9px 15px; font-size: 13.8px; line-height: 1.42;">
+          <strong>4. 台灣院前與急診中風指引（2020）</strong> — 謝明儒、陳盈如、湯頌君、鄭建興、黃集仁等。《2020 台灣腦中風學會與台灣急診醫學會急性缺血中風病人的院前緊急處置與急診診斷治療指引》。<em>Formos J Stroke</em> 2020;2(4):257–275.<br/>
+          <span class="ref-doi">DOI: 10.6318/FJS.202012_2(4).0001</span>
+        </div>
+
+        <div class="card" style="padding: 11px 16px;">
+          <div style="font-size: 14px; font-weight: 700; color: var(--primary);">5. 指引引用之核心代表臨床試驗（均摘自本知識庫指引頁）</div>
+          <div class="chip-wrap">
+            <span class="trial-chip">AcT</span>
+            <span class="trial-chip">NOR-TEST 2</span>
+            <span class="trial-chip">PRISMS</span>
+            <span class="trial-chip">ARAMIS</span>
+            <span class="trial-chip">WAKE-UP</span>
+            <span class="trial-chip">EXTEND</span>
+            <span class="trial-chip">TRACE-III</span>
+            <span class="trial-chip">TIMELESS</span>
+            <span class="trial-chip">ENCHANTED</span>
+            <span class="trial-chip">ARTIS</span>
+            <span class="trial-chip">TREAT-AIS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-footer">
+        <span>資料來源：腦中風臨床處置 LLM Wiki（wiki/topics/ais-ivt-thrombolysis.md 等 5 份 active 頁面）</span>
+        <span>Page 14 / 14</span>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- Offline Floating HUD -->
+<nav class="nav-hud" aria-label="簡報導覽控制列">
+  <button class="nav-btn" id="prevBtn" type="button">← 上一頁</button>
+  <div class="nav-dots" id="navDots"></div>
+  <span class="nav-counter" id="navCounter">1 / 14</span>
+  <button class="nav-btn" id="nextBtn" type="button">下一頁 →</button>
+  <button class="nav-btn" id="fsBtn" type="button">全螢幕 (F)</button>
+</nav>
+
+<script>
+  (function () {
+    const slides = Array.from(document.querySelectorAll('section.slide'));
+    const stage = document.getElementById('stage');
+    const counter = document.getElementById('navCounter');
+    const dotsWrap = document.getElementById('navDots');
+    let current = 0;
+
+    // Build dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.type = 'button';
+      dot.title = '跳至第 ' + (i + 1) + ' 頁';
+      dot.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(dot);
+    });
+
+    function goTo(idx) {
+      if (idx < 0 || idx >= slides.length) return;
+      slides[current].classList.remove('active');
+      dotsWrap.children[current].classList.remove('active');
+      current = idx;
+      slides[current].classList.add('active');
+      dotsWrap.children[current].classList.add('active');
+      counter.textContent = (current + 1) + ' / ' + slides.length;
+    }
+
+    window.goToSlide = function (pageNum) {
+      goTo(pageNum - 1);
+    };
+
+    function fitStage() {
+      const scale = Math.min(window.innerWidth / 1280, window.innerHeight / 720);
+      stage.style.transform = 'scale(' + scale + ')';
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('nextBtn').addEventListener('click', () => goTo(current + 1));
+    document.getElementById('fsBtn').addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen().catch(() => {});
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        goTo(current + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        goTo(current - 1);
+      } else if (e.key === 'Home') {
+        goTo(0);
+      } else if (e.key === 'End') {
+        goTo(slides.length - 1);
+      } else if (e.key === 'f' || e.key === 'F') {
+        document.getElementById('fsBtn').click();
+      }
+    });
+
+    window.addEventListener('resize', fitStage);
+    window.addEventListener('load', fitStage);
+    fitStage();
+  })();
+</script>
+</body>
+</html>
